@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIPM5", "KIPM5\KIPM5.csproj", "{0C2A0E35-BB4C-477F-A97C-8EC7E0F53F82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C2A0E35-BB4C-477F-A97C-8EC7E0F53F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2A0E35-BB4C-477F-A97C-8EC7E0F53F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2A0E35-BB4C-477F-A97C-8EC7E0F53F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2A0E35-BB4C-477F-A97C-8EC7E0F53F82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F926F895-FC8F-44F5-AC47-1A1BC096C0D3}
+	EndGlobalSection
+EndGlobal
