@@ -1,0 +1,14 @@
+﻿<Page x:Class="KIPM5.Page_c5"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_c5">
+
+    <Grid>
+        <TextBlock Margin="45,35,25,25" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run FontWeight="Bold" Text="Утилизация"/><LineBreak/><Run FontWeight="Bold"/><LineBreak/><Span><Run Text="По окончанию срока службы, УКМ подлежит утилизации. При утилизации УКМ рекомендуется его частичная разборка и сортировка по материалам (чёрные металлы, печатные платы, пластмассовые изделия и т.д.). Следуйте правилам утилизации, принятым в данном регионе."/></Span><LineBreak/><Run Text=""/><LineBreak/><Run Text=""/></TextBlock>
+    </Grid>
+</Page>

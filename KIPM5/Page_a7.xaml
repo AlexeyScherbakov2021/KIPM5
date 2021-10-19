@@ -1,0 +1,37 @@
+﻿<Page x:Class="KIPM5.Page_a7"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_a7">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="633"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Margin="8.061,23.827,20,20" VerticalAlignment="Top" Source="Resources/Шкаф.jpg" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,23.827,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run FontWeight="Bold" Text="Подготовка к работе"/><LineBreak/><Span><Run Text="Перед монтажом изделия необходимо проверить отсутствие механических повреждений корпуса устройства, нарушения маркировки и проверить комплектность поставки. "/></Span><LineBreak/><Span><Run Text="Эксплуатация изделия с механическими повреждениями не допускается."/></Span><LineBreak/><Span><Run/></Span><LineBreak/><Run FontWeight="Bold" Text="Порядок установки НГК‑КИП‑М5 "/><LineBreak/><Run Text="Установите изделие на DIN-рейку, смонтированную внутри станции СКЗ с учетом габаритов устройства, представленных на рисунке"/><Span><Run Text=". При необходимости рядом установите источник питания для УКМ с выходным напряжением 12 – 48 В мощностью не менее 5 Вт (или ИБП) и УЗИП, а также двухполюсный автоматический выключатель для подачи напряжения питания на источник питания."/></Span><LineBreak/></TextBlock>
+        <Border Height="97.025" Margin="39,362,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" CornerRadius="15" BorderBrush="Black" BorderThickness="1" Background="#FFFFEDED" Width="561" >
+            <Border.Effect>
+                <DropShadowEffect Color="#FF9C9C9C" BlurRadius="20" ShadowDepth="3"/>
+            </Border.Effect>
+            <Grid Margin="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="55*"/>
+                </Grid.ColumnDefinitions>
+                <Image Width="50" VerticalAlignment="Center" Margin="0,0,0,0" Source="Resources/Button/Warning.png"/>
+                <TextBlock Margin="5,10,10,10" TextWrapping="Wrap" Grid.Column="1" FontSize="16">
+                    <Run Text="Внимание!"/>
+                    <LineBreak/>
+                    <Run Text="Все действия по монтажу  и подключению устройства внутри СКЗ должны производиться на обесточенном оборудовании."/>
+                </TextBlock>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

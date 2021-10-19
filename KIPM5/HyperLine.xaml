@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="KIPM5.HyperLine"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KIPM5"
+             mc:Ignorable="d" HorizontalAlignment="Left" Foreground="{x:Null}" Loaded="UserControl_Loaded">
+    <Grid Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Path x:Name="Part_path" Grid.ColumnSpan="2" Margin="0" Data="M12.7,10.1L3.1 18.75L3.1 16.05L10.55 9.35L3.1 2.65L3.1 0L12.7 8.6L12.7 10.1M0,1.7L8.55 9.4L0 17.1L0 1.7" Fill="{Binding ColorArrow, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:HyperLine}}}" RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="2"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+            <!--<Path.RenderTransform>
+                <TransformGroup>
+                    <MatrixTransform Matrix="1, 0, 0, 1, 5, 0"/>
+                </TransformGroup>
+            </Path.RenderTransform>-->
+        </Path>
+        <TextBlock x:Name="tb" Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="{Binding Text, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:HyperLine}}}" FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:HyperLine}}}" FontFamily="{Binding FontFamily, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:HyperLine}}}" MouseLeftButtonUp="Tb_MouseLeftButtonUp" MouseEnter="Tb_MouseEnter" MouseLeave="Tb_MouseLeave">
+            <!--<TextBlock.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="TextBlock.IsMouseOver" Value="True">
+                            <Setter Property="TextBlock.Foreground" Value="#FFFF8282"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>-->
+        </TextBlock>
+
+    </Grid>
+</UserControl>

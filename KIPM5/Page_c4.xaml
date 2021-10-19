@@ -1,0 +1,31 @@
+﻿<Page x:Class="KIPM5.Page_c4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_c4">
+
+    <Grid>
+        <TextBlock Margin="45,35,25,25" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run FontWeight="Bold" Text="Транспортирование"/><LineBreak/><Run/><LineBreak/><Span><Run Text="Транспортирование УКМ должно осуществляться только в упакованном виде, на любые расстояния, любым видом транспорта кроме авиационного в крытых транспортных средствах в соответствии с правилами перевозок, действующими на каждом виде транспорта."/></Span><LineBreak/><Span><Run Text="Условия транспортирования в части воздействия механических факторов – категория С по ГОСТ 23216‑78. Транспортировка продукции в упакованном виде должна осуществляться по ГОСТ 15150‑69 условия 5 (ОЖ4) в интервале температур от минус 50 до +60 °С."/></Span><LineBreak/><Run Text=""/></TextBlock>
+        <Border Height="97.025" Margin="39,260,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" CornerRadius="15" BorderBrush="Black" BorderThickness="1" Background="#FFFFEDED" Width="998" >
+            <Border.Effect>
+                <DropShadowEffect Color="#FF9C9C9C" BlurRadius="20" ShadowDepth="3"/>
+            </Border.Effect>
+            <Grid Margin="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="55*"/>
+                </Grid.ColumnDefinitions>
+                <Image Width="50" VerticalAlignment="Center" Margin="0,0,0,0" Source="Resources/Button/Warning.png"/>
+                <TextBlock Margin="5,10,10,10" TextWrapping="Wrap" Grid.Column="1" FontSize="16">
+                    <Run Text="Внимание!"/>
+                    <LineBreak/>
+                    <Run Text="после транспортирования и монтажа на месте эксплуатации включение НГК КИП СМ(У) допускается только после выдержки в нормальных условиях (условиях эксплуатации) в течение 24 часов."/>
+                </TextBlock>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

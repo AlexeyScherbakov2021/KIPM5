@@ -15,12 +15,16 @@ using System.Windows.Shapes;
 
 namespace KIPM5
 {
-    
-    public partial class MainWindow : NavigationWindow
+   
+    public partial class Page_a6 : Page
     {
-        public MainWindow()
+        public Page_a6()
         {
             InitializeComponent();
+            MainFrame.Main.SetSet(MainFrame.EnSet.ALL);
+
+            MainFrame.Main.Header1.Text = "Раздел 1.";
+            MainFrame.Main.Header2.Text = "Эксплуатационные ограничения";
         }
     }
 }

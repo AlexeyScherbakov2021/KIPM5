@@ -1,0 +1,14 @@
+﻿<Page x:Class="KIPM5.Page_a1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page2">
+
+    <Grid>
+        <TextBlock Margin="20" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Span><Run Text="Настоящее руководство по эксплуатации предназначено для обеспечения правильной и безопасной эксплуатации Устройства коррозионного мониторинга НГК-КИП-М-"/></Span><Span><Run Text="×.×"/></Span><Span><Run Text=" (далее по тексту – УКМ), ознакомления потребителя с его конструкцией и принципом работы."/></Span><LineBreak/><Span><Run/></Span><LineBreak/><Span><Run Text="Устройство коррозионного мониторинга УКМ предназначено для телемеханизации станций катодной защиты (далее по тексту – СКЗ), которое осуществляется с использованием стека протоколов "/></Span><Span><Run Text="TCP"/></Span><Span><Run Text="/"/></Span><Span><Run Text="IP"/></Span><Span><Run Text=" и "/></Span><Span><Run Text="Modbus"/></Span><Span><Run Text=" по одному из трех имеющихся каналов связи: "/></Span><Span><Run Text="RS"/></Span><Span><Run Text="‑485 ("/></Span><Span><Run Text="Modbus"/></Span><Span><Run Text=" "/></Span><Span><Run Text="RTU"/></Span><Span><Run Text="), "/></Span><Span><Run Text="Ethernet"/></Span><Span><Run Text=" ("/></Span><Span><Run Text="Modbus"/></Span><Span><Run Text=" "/></Span><Span><Run Text="TCP"/></Span><Span><Run Text=") или "/></Span><Span><Run Text="GPRS"/></Span><Span><Run Text=" ("/></Span><Span><Run Text="Modbus"/></Span><Span><Run Text=" "/></Span><Span><Run Text="TCP"/></Span><Span><Run Text=")."/></Span><LineBreak/><Span><Run Text="УКМ может быть использовано как самостоятельное устройство в качестве КИП для замеров параметров электрохимической защиты металлических сооружений и передачи значений измеренных параметров в систему сбора данных. Интеграция в систему верхнего уровня производится с использованием протоколов "/></Span><Span><Run Text="Modbus"/></Span><Span><Run Text=", что позволяет устройству взаимодействовать со SCADA системами. Таблица соответствия регистров "/></Span><Span><Run Text="Modbus"/></Span><Span><Run Text=" описана в приложении Б"/></Span><Span><Run Text="."/></Span><LineBreak/><Run Text=""/></TextBlock>
+    </Grid>
+</Page>

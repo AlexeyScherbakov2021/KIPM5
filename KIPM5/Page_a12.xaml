@@ -1,0 +1,25 @@
+﻿<Page x:Class="KIPM5.Page_a12"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_a12">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="204*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Margin="31,32.682,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="456.24"><Run FontWeight="Bold" Text="Конфигурирование по интерфейсу LAN ("/><Span FontWeight="Bold"><Run Text="Modbus"/></Span><Run FontWeight="Bold" Text=" TCP)"/><LineBreak/><Span FontWeight="Bold"><Run/></Span><LineBreak/><Span><Run Text="Для настройки передачи данных по интерфейсу LAN ("/></Span><Span><Run Text="Modbus"/></Span><Run Text=" TCP) выберите в ПО соответствующую вкладку в блоке «Интерфейс передачи данных». Введите необходимые значения в поля: IP адрес устройства, IP адрес шлюза, Маска сети, Порт. Нажмите кнопку «передать настройки соединения». "/><LineBreak/><Span><Run Text="По завершении записи параметров необходимо нажать кнопку «Сохранить данные в КИП и перезагрузить с новыми настройками». После этого устройство перезагрузиться автоматически и загрузится с установленными параметрами."/></Span><LineBreak/><Run/></TextBlock>
+        <Image HorizontalAlignment="Center" Margin="10,10,10,20" VerticalAlignment="Top" Grid.Column="1" Source="Resources/ProgTCP.jpg">
+            <Image.Effect>
+                <DropShadowEffect Color="#FF979797" BlurRadius="42" ShadowDepth="1"/>
+            </Image.Effect>
+        </Image>
+
+    </Grid>
+</Page>
+

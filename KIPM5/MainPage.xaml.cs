@@ -16,11 +16,20 @@ using System.Windows.Shapes;
 namespace KIPM5
 {
     
-    public partial class MainWindow : NavigationWindow
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
+            MainFrame.Main.SetSet(MainFrame.EnSet.START);
+
+
+            MainFrame.Main.rowHeader.Height = new GridLength(0);
+        }
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Main.rowHeader.Height = new GridLength(83);
         }
     }
 }

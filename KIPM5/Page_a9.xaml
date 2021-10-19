@@ -1,0 +1,15 @@
+﻿<Page x:Class="KIPM5.Page_a9"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_a9">
+
+    <Grid>
+        <TextBlock Margin="30,32,35,19" TextWrapping="Wrap" FontSize="16" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Функциональная работа"/><LineBreak/><Run FontWeight="Bold"/><LineBreak/><Span><Run Text="Функциональная работа изделия выглядит следующим образом:"/></Span><LineBreak/><Run Text="  •по каналам измерения производятся замеры параметров защиты с заданной периодичностью;&#xD;&#xA;  • контролируется состояние концевого выключателя вскрытия корпуса СКЗ;&#xD;&#xA;  • измеряется напряжение питания СКЗ;&#xD;&#xA;  • опрашивается счетчик электроэнергии с периодичностью 1 раз в минуту;&#xD;&#xA;  • по выбранным и настроенным интерфейсам передачи данных устройство передает и получает данные от системы ВУ;&#xD;&#xA;  • в случае получении изделием от системы ВУ значения задания управляющего напряжения, изделие формирует и подаёт напряжение задания в диапазоне 0…10 В на вход управления СКЗ;&#xD;&#xA;  • при включенном модуле СМС информирования, в случае возникновения аварийной ситуации, на сохраненный в устройстве номер телефона отправляется информационное сообщение с кратким описанием ситуации;&#xD;&#xA;  • при подключении по интерфейсу Bluetooth устройств под управлением операционной системой Android (5.0 и выше), изделие передает им текущие параметры работы (необходима установка на Android-устройство приложения «КИП-М5 Монитор»);"/><LineBreak/><Span FontSize="16"><Run Text="при включенном модуле SD-Card, устройство ведет запись всех измеренных параметров на карту памяти."/></Span><LineBreak/><Run Text=""/></TextBlock>
+
+    </Grid>
+</Page>

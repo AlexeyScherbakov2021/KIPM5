@@ -1,0 +1,15 @@
+﻿<Page x:Class="KIPM5.Page_c1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_c1">
+
+    <Grid>
+        <TextBlock Margin="45,35,25,25" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run FontWeight="Bold" Text="Общие указания"/><LineBreak/><Span><Run Text="УКМ, входящее в состав станции катодной защиты, должно проходить плановое техническое обслуживание в объёме и с периодичностью, предписанными требованиями к техническому обслуживанию модулей стации катодной защиты."/></Span><LineBreak/><Span><Run Text="В процессе эксплуатации УКМ обеспечивает нормальную работу в течение гарантированного срока службы и не нуждается в дополнительном техническом обслуживании."/></Span><LineBreak/><Span><Run/></Span><LineBreak/><Run FontWeight="Bold" Text="Меры безопасности"></Run><LineBreak/><Span><Run Text="УКМ относится к классу 0 по ГОСТ 12.2.007.0‑75 по способу защиты человека от поражения электрическим током. К работе с УКМ допускаются лица, прошедшие проверку знаний «Правил эксплуатации электроустановок потребителей», имеющие право работать с электроустановками напряжением до 1000 В и прошедшие инструктаж по технике безопасности. Подключение и отключение устройства следует производить при отключённом напряжении питания."/></Span><LineBreak/><Run Text=""/></TextBlock>
+
+    </Grid>
+</Page>

@@ -1,0 +1,144 @@
+﻿<Page x:Class="KIPM5.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1300"
+      Title="MainPage" Unloaded="Page_Unloaded">
+
+    <Page.Background>
+        <ImageBrush ImageSource="Resources/Background/imageStart.jpg" Opacity="0.35"/>
+    </Page.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="425*"/>
+            <ColumnDefinition Width="382*"/>
+            <ColumnDefinition Width="363*"/>
+            <ColumnDefinition Width="130*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="129"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid SnapsToDevicePixels="True" Background="#FFE8F3F3" Grid.Row="1" Margin="75,0,5,22">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
+            </Grid.Effect>
+            <StackPanel DockPanel.Dock="Top" UseLayoutRounding="False" Margin="0">
+                <TextBlock TextWrapping="Wrap" Foreground="White" FontFamily="Arial" FontSize="16" TextAlignment="Center" Padding="5,10" FontWeight="Bold">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
+                    </TextBlock.Background>
+                    <Run Text="Описание и работа НГК-КИП-М5"/>
+                </TextBlock>
+                <local:HyperLine Text="Назначение" NavigateUri="Page_a1.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Условное обозначение" NavigateUri="Page_a2.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Технические характеристики" NavigateUri="Page_a3.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Функциональные возможности" NavigateUri="Page_a4.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Общий вид" NavigateUri="Page_a5.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
+            </StackPanel>
+            <Grid Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="89*"/>
+                    <ColumnDefinition Width="37*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="tbZad1" Text="Задания" Foreground="White" VerticalAlignment="Center" Margin="20,6.36,0,6.36" FontSize="16" Cursor="Hand" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="tbTest1" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,6.36,19.999,6.36" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="20,0,5,22" Grid.Column="1" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
+            </Grid.Effect>
+            <StackPanel Margin="0">
+                <TextBlock TextWrapping="Wrap" Foreground="White" FontFamily="Arial" FontSize="16" TextAlignment="Center" Margin="0" Padding="5,10" FontWeight="Bold">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
+                    </TextBlock.Background>
+                    <Run Text="Использование по назначению"/>
+                </TextBlock>
+
+                <local:HyperLine Text="Эксплуатационные ограничения" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Порядок установки НГК-КИП-М5" FontSize="18" NavigateUri="Page_a7.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Подключение НГК-КИП-М5" FontSize="18" NavigateUri="Page_a8.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Функциональная работа" FontSize="18" NavigateUri="Page_a9.xaml" Margin="5,10,4,0" Foreground="Black" ColorArrow="Black" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование" FontSize="18" NavigateUri="Page_a10.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование по интерфейсу RS-485 (Modbus RTU)" FontSize="18" NavigateUri="Page_a11.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование по интерфейсу LAN (Modbus TCP)" FontSize="18" NavigateUri="Page_a12.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование по интерфейсу GPRS (Modbus TCP)" FontSize="18" NavigateUri="Page_a13.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+            </StackPanel>
+            <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
+                </Grid.Background>
+                <TextBlock x:Name="tbZad2" Text="Задания" Foreground="White" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="16" HorizontalAlignment="Left" Cursor="Hand"/>
+                <TextBlock x:Name="tbTest2" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16" Cursor="Hand" HorizontalAlignment="Right"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="20,0,5,22" Grid.Column="2" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
+            </Grid.Effect>
+            <StackPanel Margin="0" Background="#FFE8F3F3">
+                <TextBlock TextWrapping="Wrap" Foreground="White" FontFamily="Arial" FontSize="16" TextAlignment="Center" Padding="5,10" VerticalAlignment="Center" FontWeight="Bold">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
+                    </TextBlock.Background>
+                    <TextBlock.Text>Техническое обслуживание и текущий ремонт ТОиР</TextBlock.Text>
+                </TextBlock>
+                <local:HyperLine Text="Общие указания и меры безопасности" FontSize="18" NavigateUri="Page_c1.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Текущий ремонт" FontSize="18" NavigateUri="Page_c2.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Консервация и хранение" FontSize="18" NavigateUri="Page_c3.xaml" Margin="5,10,4,0" Foreground="Black" ColorArrow="Black" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Транспортирование" FontSize="18" NavigateUri="Page_c4.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Утилизация" FontSize="18" NavigateUri="Page_c5.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+            </StackPanel>
+            <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
+                </Grid.Background>
+                <TextBlock x:Name="tbZad3" Text="Задания" Foreground="White" VerticalAlignment="Center" Margin="11,0,0,0" FontSize="16" HorizontalAlignment="Left" Cursor="Hand"/>
+                <TextBlock x:Name="tbTest3" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" />
+            </Grid>
+        </Grid>
+        <Grid Margin="20,0,20,22" Grid.Column="3" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True" Visibility="Collapsed">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
+            </Grid.Effect>
+            <StackPanel Margin="0" Background="#FFE8F3F3">
+                <TextBlock TextWrapping="Wrap" Foreground="White" FontFamily="Arial" FontSize="16" TextAlignment="Center" Padding="5,10" VerticalAlignment="Center" FontWeight="Bold">
+                    <TextBlock.Background>
+                        <ImageBrush ImageSource="Resources/Background/siniy_goluboj_fon_2560x1600.jpg" Stretch="None"/>
+                    </TextBlock.Background>
+                    <Run Text="Подсистема дистанционного коррозионного мониторнига"/>
+                    <LineBreak/>
+                    <Run Text="НГК-СКМ"/>
+
+                </TextBlock>
+                <local:HyperLine Text="Описание и работа" FontSize="18" NavigateUri="SectionD/Page_d1.xaml" Margin="4,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+            </StackPanel>
+            <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Resources/Background/siniy_goluboj_fon_2560x1600.jpg" Stretch="None"/>
+                </Grid.Background>
+                <TextBlock x:Name="tbZad4" Text="Задания" Foreground="White" VerticalAlignment="Center" Margin="11,0,0,0" FontSize="16" HorizontalAlignment="Left" Cursor="Hand"/>
+                <TextBlock x:Name="tbTest4" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" />
+            </Grid>
+        </Grid>
+        <Grid Margin="0" Grid.ColumnSpan="4" SnapsToDevicePixels="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="332"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="33.102,0,0,0" TextWrapping="Wrap" FontSize="30" Grid.Column="1" Padding="20,10,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FF014928" HorizontalAlignment="Left" TextAlignment="Center" VerticalAlignment="Center"><Run Text="Компьютерный тренажерный комплекс по работе"/><LineBreak/><Run Text="с НГК-КИП-М5"/></TextBlock>
+            <Image HorizontalAlignment="Left" Height="109" Margin="10,4,0,0" VerticalAlignment="Top" Width="322" Source="Resources/NGK.png"/>
+        </Grid>
+
+    </Grid>
+</Page>
+

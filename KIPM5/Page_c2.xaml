@@ -1,0 +1,14 @@
+﻿<Page x:Class="KIPM5.Page_c2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_c2">
+
+    <Grid>
+        <TextBlock Margin="45,35,25,25" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run FontWeight="Bold" Text="Общие указания"/><LineBreak/><Span><Run Text="УКМ, в работе которого выявлены неполадки, направляется на предприятие изготовитель для ремонта и калибровки. Запрещается вне предприятия-изготовителя разбирать устройство, проводить доработку монтажа, проводить замену электронных компонентов."/></Span><LineBreak/><Run Text=""/><LineBreak/><Run Text=""/></TextBlock>
+    </Grid>
+</Page>

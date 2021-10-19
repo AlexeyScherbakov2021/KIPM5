@@ -1,0 +1,21 @@
+﻿<Page x:Class="KIPM5.Page_a8"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_a8">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="488"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Margin="8.061,23.827,15,15" VerticalAlignment="Top" Source="Resources/СхемаПодключения.jpg" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,23.827,0,18" TextWrapping="Wrap" FontSize="16"><Run Text="1. Подключение изделия к СКЗ проводится в соответствии со схемой подключения, изображённой на рисунке (если изделие не входит в состав станции катодной защиты).&#xD;&#xA;2. При использовании линии связи RS‑485 для передачи данных в систему телеуправления верхнего уровня (далее по тексту – ВУ) может потребоваться терминальный резистор номиналом 120 Ом (или 100 – 150 Ом), устанавливаемый в клеммник устройства параллельно проводам линии связи для согласования волнового сопротивления кабеля. Номинал терминального резистора определяется опытным путём и зависит от длины и качества кабеля, а также количества устройств, подключенных к линии связи.&#xD;&#xA;3. Для использования в качестве линии связи с системой ВУ канала GPRS необходимо установить на корпусе СКЗ антенну GSM диапазона с кабельным разъемом SMA или установить антенну на мачту с использованием грозозащитного кабельного устройства.&#xD;&#xA;4. Использование в качестве линии связи Ethernet интерфейса предполагает установку в СКЗ преобразователя интерфейса ВОЛС (медиаконвертера) для передачи данных по оптическим линиям связи, либо использование кабеля UTP/FTP категории 5E для внешней прокладки на расстояния до 100 м, обжатого наконечниками RG-45."/><LineBreak/><Run Text=""/><LineBreak/></TextBlock>
+
+    </Grid>
+</Page>
+

@@ -1,0 +1,16 @@
+﻿<Page x:Class="KIPM5.Page_a5"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="Page_a5">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="22,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Span><Run Text="Комплектность поставки"/></Span><LineBreak/><Span><Run Text="Комплект поставки определяется картой заказа:"/></Span><LineBreak/><Run Text="   • устройство НГК-КИП-М-×.× соответствующего исполнения – 1 шт.;&#xA;   • устройство НГК-УЗИП КИП-М – 1 шт.;&#xA;   • руководство по эксплуатации – 1 шт.;&#xA;   • паспорт – 1 шт."/><LineBreak/><Run Text=""/></TextBlock>
+        <Image HorizontalAlignment="Left" Height="558" Margin="637,32,0,0" VerticalAlignment="Top" Width="526" Source="Resources/KIPM5.jpg"/>
+
+    </Grid>
+</Page>
