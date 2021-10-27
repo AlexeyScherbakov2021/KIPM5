@@ -329,6 +329,18 @@
     <Resource Include="Resources\Background\1618599320_50-funart_pro-p-oboi-fon-biryuzovii-tsvet-fon-51.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\КИП5\KIP5_01.png" />
+    <Resource Include="Resources\КИП5\KIP5_02.png" />
+    <Resource Include="Resources\КИП5\KIP5_03.png" />
+    <Resource Include="Resources\КИП5\KIP5_04.png" />
+    <Resource Include="Resources\КИП5\KIP5_05.png" />
+    <Resource Include="Resources\КИП5\KIP5_06.png" />
+    <Resource Include="Resources\КИП5\KIP5_07.png" />
+    <Resource Include="Resources\КИП5\KIP5_08.png" />
+    <Resource Include="Resources\КИП5\KIP5_09.png" />
+    <Resource Include="Resources\КИП5\KIP5_10.png" />
+    <Resource Include="Resources\КИП5\KIP5_11.png" />
+    <Resource Include="Resources\КИП5\KIP5_12.png" />
     <Resource Include="Resources\Шкаф.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -341,6 +353,9 @@
     <Resource Include="Resources\ProgGPRS.jpg" />
     <Resource Include="Resources\ProgRS485.jpg" />
     <Resource Include="Resources\ProgTCP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SIM.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,10 +7,150 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="1300"
       Title="Page_a5">
+    <Page.Resources>
+        <SolidColorBrush x:Key="Item.MouseOver.Background" Color="#1F26A0DA"/>
+        <SolidColorBrush x:Key="Item.MouseOver.Border" Color="#a826A0Da"/>
+        <SolidColorBrush x:Key="Item.SelectedInactive.Background" Color="#3DDADADA"/>
+        <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="#FFDADADA"/>
+        <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="#3D26A0DA"/>
+        <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="#FF26A0DA"/>
+        <Style TargetType="{x:Type ListBoxItem}">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Padding" Value="4,1"/>
+            <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true" Margin="0,0,0,10">
+                            <Grid Margin="0" Cursor="Hand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="22"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Path x:Name="Part_path" Visibility="Hidden" Data="M12.7,10.1L3.1 18.75L3.1 16.05L10.55 9.35L3.1 2.65L3.1 0L12.7 8.6L12.7 10.1M0,1.7L8.55 9.4L0 17.1L0 1.7" Fill="Black"/>
+                                <TextBlock x:Name="Part_text" Grid.Column="1" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" TextWrapping="Wrap"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource Item.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Item.MouseOver.Border}"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                                    <Condition Property="IsSelected" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Foreground" TargetName="Part_text" Value="#FF3576FF"/>
+                                <Setter Property="Fill" TargetName="Part_path" Value="#FF3576FF"/>
+                                <Setter Property="Visibility" TargetName="Part_path" Value="Visible"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Selector.IsSelectionActive" Value="True"/>
+                                    <Condition Property="IsSelected" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Foreground" TargetName="Part_text" Value="#FF3576FF"/>
+                                <Setter Property="Fill" TargetName="Part_path" Value="#FF3576FF"/>
+                                <Setter Property="Visibility" TargetName="Part_path" Value="Visible"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type Path}">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Path.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.8" To="0" Duration="0:0:0.2" 
+                                                 AutoReverse="True" RepeatBehavior="Forever">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
 
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="22,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Span><Run Text="Комплектность поставки"/></Span><LineBreak/><Span><Run Text="Комплект поставки определяется картой заказа:"/></Span><LineBreak/><Run Text="   • устройство НГК-КИП-М-×.× соответствующего исполнения – 1 шт.;&#xA;   • устройство НГК-УЗИП КИП-М – 1 шт.;&#xA;   • руководство по эксплуатации – 1 шт.;&#xA;   • паспорт – 1 шт."/><LineBreak/><Run Text=""/></TextBlock>
-        <Image HorizontalAlignment="Left" Height="558" Margin="637,32,0,0" VerticalAlignment="Top" Width="526" Source="Resources/KIPM5.jpg"/>
+        <Viewbox Margin="570.863,58.5,10,29.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid x:Name="grid" Height="512" Width="719.137">
+                <Image HorizontalAlignment="Left" Height="505" Margin="233.375,-10,-19.238,0" VerticalAlignment="Top" Width="505" Source="Resources/КИП5/KIP5_10.png">
+                    <Image.Effect>
+                        <DropShadowEffect Color="#FFC7C7C7" ShadowDepth="36" BlurRadius="49" Direction="306"/>
+                    </Image.Effect>
+                </Image>
+                <Image HorizontalAlignment="Left" Height="505" Margin="-84.762,0,0,0" VerticalAlignment="Top" Width="505" Source="Resources/КИП5/KIP5_02.png">
+                    <Image.Effect>
+                        <DropShadowEffect Color="#FFC7C7C7" ShadowDepth="36" BlurRadius="49" Direction="306"/>
+                    </Image.Effect>
+                </Image>
+                <Path x:Name="path0" Data="M689.71567,203.94094 L696.99537,197.59163 708.47877,197.52886 707.61766,233.78982 696.97222,233.74038 689.61845,228.5 z" HorizontalAlignment="Left" Height="44.622" Margin="96,112.708,0,0" Stretch="Fill" VerticalAlignment="Top" Width="25.125" StrokeThickness="7" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path1" Data="M520.04168,105.83333 L523.87531,101.0003 530.87529,101.00063 535.04196,105.83371 533.70892,149.66206 530.37552,153.3279 522.87538,153.32789 519.70865,149.66204 z" HorizontalAlignment="Left" Height="76.328" Margin="132.5,122.752,0,0" Stretch="Fill" StrokeThickness="7" VerticalAlignment="Top" Width="24.832" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path2" Data="M493.87492,139.66647 L516.20796,139.16699 516.04112,170.17559 493.87475,170.3423 z" HorizontalAlignment="Left" Height="50.417" Margin="98.169,172.167,0,0" Stretch="Fill" StrokeThickness="8" VerticalAlignment="Top" Width="38.581" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path3" Data="M488.87503,175.16667 L539.542,175.16667 539.04203,240.16634 488.04204,239.99934 z" HorizontalAlignment="Left" Height="92.173" Margin="86.5,216.417,0,0" Stretch="Fill" StrokeThickness="13" VerticalAlignment="Top" Width="77.497" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path4" Data="M484.2084,283.4999 C483.0126,268.67293 493.43615,260.24031 505.62053,260.96963 518.16709,261.72063 526.15031,271.96999 526.2049,283.01129 526.25615,293.37498 517.25703,302.82886 506.20822,303.08298 493.50193,303.37523 485.12579,294.87485 484.2084,283.4999 z" HorizontalAlignment="Left" Height="65.413" Margin="87.25,327.927,0,0" Stretch="Fill" StrokeThickness="12" VerticalAlignment="Top" Width="65.085" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path5" Data="M847.125,174.75 L861.875,174.5 861.375,231.75 846.375,231.5 z" HorizontalAlignment="Left" Height="88.5" Margin="463.5,202.5,0,0" Stretch="Fill" StrokeThickness="9" VerticalAlignment="Top" Width="28.167" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+
+            </Grid>
+
+        </Viewbox>
+
+        <ListBox x:Name="lbItems" DisplayMemberPath="Name" Margin="222,206.5,0,0" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Sans Serif" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" BorderBrush="{x:Null}" SelectionChanged="LbItems_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358.5" Height="304"/>
 
     </Grid>
 </Page>
