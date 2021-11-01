@@ -1,12 +1,13 @@
-﻿<Page x:Class="KIPM5.Page_a5"
+﻿<Page x:Class="KIPM5.Page_a7a"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:KIPM5"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="600" d:DesignWidth="1300"
-      Title="Page_a5">
+      Title="Page_a7a">
+
     <Page.Resources>
         <SolidColorBrush x:Key="Item.MouseOver.Background" Color="#1F26A0DA"/>
         <SolidColorBrush x:Key="Item.MouseOver.Border" Color="#a826A0Da"/>
@@ -83,21 +84,21 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="22,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Span><Run Text="Комплектность поставки"/></Span><LineBreak/><Span><Run Text="Комплект поставки определяется картой заказа:"/></Span><LineBreak/><Run Text="   • устройство НГК-КИП-М-×.× соответствующего исполнения – 1 шт.;&#xA;   • устройство НГК-УЗИП КИП-М – 1 шт.;&#xA;   • руководство по эксплуатации – 1 шт.;&#xA;   • паспорт – 1 шт."/><LineBreak/><Run Text=""/></TextBlock>
-        <Viewbox Margin="570.863,58.5,10,29.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Grid x:Name="grid" Height="512" Width="719.137">
-                <Image HorizontalAlignment="Left" Height="505" Margin="233.375,-10,-19.238,0" VerticalAlignment="Top" Width="505" Source="Resources/КИП5/KIP5_10.png">
-                    <Image.Effect>
-                        <DropShadowEffect Color="#FFC7C7C7" ShadowDepth="36" BlurRadius="100" Direction="259"/>
-                    </Image.Effect>
-                </Image>
-                <Image HorizontalAlignment="Left" Height="505" Margin="-84.762,0,0,0" VerticalAlignment="Top" Width="505" Source="Resources/КИП5/KIP5_02.png">
-                    <Image.Effect>
-                        <DropShadowEffect Color="#FFC7C7C7" ShadowDepth="36" BlurRadius="100" Direction="259"/>
-                    </Image.Effect>
-                </Image>
-                <Path x:Name="path0" Data="M689.71567,203.94094 L696.99537,197.59163 708.47877,197.52886 707.61766,233.78982 696.97222,233.74038 689.61845,228.5 z" HorizontalAlignment="Left" Height="44.622" Margin="96,112.708,0,0" Stretch="Fill" VerticalAlignment="Top" Width="25.125" StrokeThickness="7" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+    <Grid Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="18*" MinWidth="350"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbItems" DisplayMemberPath="Name" Margin="10,24,23,199" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Sans Serif" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" BorderBrush="{x:Null}" SelectionChanged="LbItems_SelectionChanged"/>
+        <Viewbox Margin="294,20,20,10" Grid.ColumnSpan="2">
+            <Grid x:Name="grid" Width="1612" Height="922">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="339*"/>
+                    <RowDefinition Height="107*"/>
+                </Grid.RowDefinitions>
+                <Image Source="Resources/Шкаф/Шкаф 1.jpg"/>
+                <Image Source="Resources/Шкаф/таблица клемм.png" Grid.Row="1"/>
+                <Path x:Name="path0" HorizontalAlignment="Left" Margin="297.819,268.943,0,0" StrokeThickness="10" VerticalAlignment="Top" Cursor="Hand" Data="M813.85979,10.539001 L836.79405,10.583889 835.70378,128.296 812.81499,128.296 z M26.979275,3.5000248 L29.159,125.57204 6.270256,125.02659 3.5,4.5450311 z M324.52846,3.5 L325.07298,132.65594 290.74062,132.656 289.06096,4.0000098 z" Height="136.156" Stretch="Fill" Width="840.294" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
                     <Path.Stroke>
                         <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
                     </Path.Stroke>
@@ -105,7 +106,7 @@
                         <SolidColorBrush Color="Black" Opacity="0"/>
                     </Path.Fill>
                 </Path>
-                <Path x:Name="path1" Data="M520.04168,105.83333 L523.87531,101.0003 530.87529,101.00063 535.04196,105.83371 533.70892,149.66206 530.37552,153.3279 522.87538,153.32789 519.70865,149.66204 z" HorizontalAlignment="Left" Height="76.328" Margin="132.5,122.752,0,0" Stretch="Fill" StrokeThickness="7" VerticalAlignment="Top" Width="24.832" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                <Path x:Name="path1" HorizontalAlignment="Left" StrokeThickness="10" VerticalAlignment="Top" Cursor="Hand" Data="M3.5,398.55269 L223.16399,400.23268 220.43967,522.84965 4.089447,520.67015 z M405.18208,3.5 L407.36201,67.261229 333.24699,68.351004 332.70201,5.1353097 z" Height="526.35" Margin="4.085,348.507,0,0" Grid.RowSpan="2" Stretch="Fill" Width="410.862" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
                     <Path.Stroke>
                         <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
                     </Path.Stroke>
@@ -113,7 +114,7 @@
                         <SolidColorBrush Color="Black" Opacity="0"/>
                     </Path.Fill>
                 </Path>
-                <Path x:Name="path2" Data="M493.87492,139.66647 L516.20796,139.16699 516.04112,170.17559 493.87475,170.3423 z" HorizontalAlignment="Left" Height="50.417" Margin="98.169,172.167,0,0" Stretch="Fill" StrokeThickness="8" VerticalAlignment="Top" Width="38.581" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                <Path x:Name="path2" Data="M411.17447,186.06617 L565.17151,184.20434 568.71418,507.91986 416.94164,510.09953 z" HorizontalAlignment="Left" Height="332.888" Margin="408.173,181.204,0,0" Stretch="Fill" StrokeThickness="16" VerticalAlignment="Top" Width="164.539" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
                     <Path.Stroke>
                         <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
                     </Path.Stroke>
@@ -121,7 +122,7 @@
                         <SolidColorBrush Color="Black" Opacity="0"/>
                     </Path.Fill>
                 </Path>
-                <Path x:Name="path3" Data="M488.87503,175.16667 L539.542,175.16667 539.04203,240.16634 488.04204,239.99934 z" HorizontalAlignment="Left" Height="92.173" Margin="86.5,216.417,0,0" Stretch="Fill" StrokeThickness="13" VerticalAlignment="Top" Width="77.497" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                <Path x:Name="path3" Data="M724.80057,161.81549 L828.93329,160.22532 825.6639,574.40416 726.48032,573.31418 z" HorizontalAlignment="Left" Height="421.171" Margin="721.801,157.226,0,0" Stretch="Fill" StrokeThickness="26" VerticalAlignment="Top" Width="111.132" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
                     <Path.Stroke>
                         <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
                     </Path.Stroke>
@@ -129,7 +130,7 @@
                         <SolidColorBrush Color="Black" Opacity="0"/>
                     </Path.Fill>
                 </Path>
-                <Path x:Name="path4" Data="M484.2084,283.4999 C483.0126,268.67293 493.43615,260.24031 505.62053,260.96963 518.16709,261.72063 526.15031,271.96999 526.2049,283.01129 526.25615,293.37498 517.25703,302.82886 506.20822,303.08298 493.50193,303.37523 485.12579,294.87485 484.2084,283.4999 z" HorizontalAlignment="Left" Height="65.413" Margin="87.25,327.927,0,0" Stretch="Fill" StrokeThickness="12" VerticalAlignment="Top" Width="65.085" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                <Path x:Name="path4" Data="M724.80057,161.81549 L828.93329,160.22532 825.6639,574.40416 726.48032,573.31418 z" HorizontalAlignment="Left" Height="421.171" Margin="815.181,157.226,0,0" Stretch="Fill" StrokeThickness="26" VerticalAlignment="Top" Width="111.132" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
                     <Path.Stroke>
                         <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
                     </Path.Stroke>
@@ -137,7 +138,7 @@
                         <SolidColorBrush Color="Black" Opacity="0"/>
                     </Path.Fill>
                 </Path>
-                <Path x:Name="path5" Data="M847.125,174.75 L861.875,174.5 861.375,231.75 846.375,231.5 z" HorizontalAlignment="Left" Height="88.5" Margin="463.5,202.5,0,0" Stretch="Fill" StrokeThickness="9" VerticalAlignment="Top" Width="28.167" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                <Path x:Name="path5" HorizontalAlignment="Left" Grid.RowSpan="2" StrokeThickness="16" VerticalAlignment="Top" Data="M14.539506,439.06557 L241.24407,440.15535 239.06451,635.2524 13.44963,635.2524 z M768.76904,8 L768.22375,73.395996 702.828,73.395874 703.37317,8.5450134 z" Height="643.252" Margin="213.255,274.252,0,0" Stretch="Fill" Width="771.319" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
                     <Path.Stroke>
                         <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
                     </Path.Stroke>
@@ -145,12 +146,49 @@
                         <SolidColorBrush Color="Black" Opacity="0"/>
                     </Path.Fill>
                 </Path>
-
+                <Path x:Name="path6" HorizontalAlignment="Left" Grid.RowSpan="2" StrokeThickness="16" VerticalAlignment="Top" Data="M183.47946,440.1555 L406.91249,441.24528 406.91278,638.52218 182.38958,638.52218 z M768.76904,8 L768.22375,73.395996 702.828,73.395874 703.37317,8.5450134 z" Height="646.522" Margin="432.4,274.252,0,0" Stretch="Fill" Width="602.369" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path7" HorizontalAlignment="Left" Grid.RowSpan="2" StrokeThickness="16" VerticalAlignment="Top" Data="M360.39165,445.60701 L587.63385,447.78484 587.62137,604.14364 359.289,603.05559 z M741.52037,8 L740.97508,73.395996 702.828,73.395874 703.37317,8.5450134 z" Height="612.143" Margin="659.578,274.252,0,0" Stretch="Fill" Width="398.224" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path8" HorizontalAlignment="Left" Grid.RowSpan="2" StrokeThickness="16" VerticalAlignment="Top" Data="M569.66592,445.60701 L796.90812,447.78484 796.89564,604.14364 568.56327,603.05559 z M741.52037,8 L740.97508,73.395996 702.828,73.395874 703.37317,8.5450134 z" Height="612.143" Margin="893.108,274.252,0,0" Stretch="Fill" Width="244.332" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path9" HorizontalAlignment="Left" Grid.RowSpan="2" StrokeThickness="16" VerticalAlignment="Top" Data="M766.95293,445.60701 L1010.5446,447.78484 1010.5321,604.14364 765.85028,603.05559 z M741.52037,8 L740.97508,73.395996 702.828,73.395874 703.37317,8.5450134 z" Height="612.143" Margin="1050.018,274.252,0,0" Stretch="Fill" Width="323.706" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="path10" HorizontalAlignment="Left" Grid.RowSpan="2" StrokeThickness="16" VerticalAlignment="Top" Data="M984.94125,445.60701 L1228.5329,447.78484 1228.5204,604.14364 983.8386,603.05559 z M741.52037,8 L740.97508,73.395996 702.828,73.395874 703.37317,8.5450134 z" Height="612.143" Margin="1071.518,274.752,-1.224,0" Stretch="Fill" Width="541.706" Cursor="Hand" MouseLeftButtonUp="Path0_MouseLeftButtonUp">
+                    <Path.Stroke>
+                        <SolidColorBrush Color="#FF7DDAFD" Opacity="0"/>
+                    </Path.Stroke>
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
             </Grid>
-
         </Viewbox>
-
-        <ListBox x:Name="lbItems" DisplayMemberPath="Name" Margin="222,206.5,0,0" FontSize="16" FontWeight="Bold" FontFamily="Microsoft Sans Serif" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" BorderBrush="{x:Null}" SelectionChanged="LbItems_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358.5" Height="304"/>
 
     </Grid>
 </Page>
+

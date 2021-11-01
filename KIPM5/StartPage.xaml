@@ -76,7 +76,7 @@
                         <LineBreak/>
                         <Run Text="омплекс (КТК)"/>
                     </TextBlock>
-                    <TextBlock FontSize="60" FontFamily="Source Serif Pro Black" Foreground="White" Margin="19,146,16,55" HorizontalAlignment="Center" >
+                    <TextBlock FontSize="60" FontFamily="Source Serif Pro Black" Foreground="White" Margin="126,146,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
                         <Run Text="НГК-КИП-М5"/>
                     </TextBlock>
                 </Grid>
@@ -84,7 +84,10 @@
         </Border>
         <Border Background="#FF006864" Margin="0" VerticalAlignment="Bottom" Height="40"/>
         <Image Source="Resources/NGK.png" Margin="30,0,0,41" RenderTransformOrigin="0.523,0.509" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="106" Width="316"/>
-        <Image Margin="775,220.5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="490" Width="337">
+        <Image Margin="612.5,175.5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="484.5" Width="452.5" Source="Resources/КИП5/KIP5_03.png">
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="45" Color="#FFBDBDBD" BlurRadius="57" Direction="290"/>
+            </Image.Effect>
             <Image.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -102,7 +105,7 @@
             </Image.OpacityMask>
         </Image>
         <Button x:Name="buttonStart" Content="Button" HorizontalAlignment="Left" Height="102" 
-                Margin="597,314,0,0" VerticalAlignment="Top" 
+                Margin="522,314,0,0" VerticalAlignment="Top" 
                 Width="156" Style="{DynamicResource StartButtonStyle}" 
                 Background="#FFFFF300" Cursor="Hand" Click="ButtonStart_Click" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>

@@ -100,6 +100,9 @@
     <Compile Include="Page_a7.xaml.cs">
       <DependentUpon>Page_a7.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page_a7a.xaml.cs">
+      <DependentUpon>Page_a7a.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page_a8.xaml.cs">
       <DependentUpon>Page_a8.xaml</DependentUpon>
     </Compile>
@@ -198,6 +201,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page_a7a.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page_a8.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -282,6 +289,8 @@
   <ItemGroup>
     <Resource Include="Resources\Background\imageStart.jpg" />
     <Resource Include="Resources\NGK.png" />
+    <Resource Include="Resources\Шкаф\таблица клемм.png" />
+    <Resource Include="Resources\Шкаф\Шкаф 1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Background\161.jpg" />
