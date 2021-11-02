@@ -99,7 +99,7 @@
                 <local:HyperLine Text="Транспортирование" FontSize="18" NavigateUri="Page_c4.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Утилизация" FontSize="18" NavigateUri="Page_c5.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Обучение. Порядок включения." FontSize="18" NavigateUri="Page_c5.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Обучение. Конфигурирование." FontSize="18" NavigateUri="Page_c5.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Обучение. Конфигурирование." FontSize="18" NavigateUri="Page_c6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>

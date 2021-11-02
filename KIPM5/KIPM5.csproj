@@ -124,6 +124,9 @@
     <Compile Include="Page_c5.xaml.cs">
       <DependentUpon>Page_c5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page_c6.xaml.cs">
+      <DependentUpon>Page_c6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
@@ -230,6 +233,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page_c5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_c6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -365,6 +372,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\SIM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\КИП5\K2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ПО\P01.png" />
+    <Resource Include="Resources\ПО\P02.png" />
+    <Resource Include="Resources\ПО\P03.png" />
+    <Resource Include="Resources\ПО\P04.png" />
+    <Resource Include="Resources\ПО\P05.png" />
+    <Resource Include="Resources\ПО\P06.png" />
+    <Resource Include="Resources\ПО\P07.png" />
+    <Resource Include="Resources\ПО\P08.png" />
+    <Resource Include="Resources\ПО\P09.png" />
+    <Resource Include="Resources\ПО\P10.png" />
+    <Resource Include="Resources\ПО\P11.png" />
+    <Resource Include="Resources\ПО\Web01.png" />
+    <Resource Include="Resources\ПО\Web02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ПО\Notebook.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
