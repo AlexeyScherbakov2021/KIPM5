@@ -83,6 +83,9 @@
     <Compile Include="Page_a13.xaml.cs">
       <DependentUpon>Page_a13.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page_a14.xaml.cs">
+      <DependentUpon>Page_a14.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page_a2.xaml.cs">
       <DependentUpon>Page_a2.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,12 @@
     <Compile Include="Page_a5.xaml.cs">
       <DependentUpon>Page_a5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page_a5a.xaml.cs">
+      <DependentUpon>Page_a5a.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_a5b.xaml.cs">
+      <DependentUpon>Page_a5b.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page_a6.xaml.cs">
       <DependentUpon>Page_a6.xaml</DependentUpon>
     </Compile>
@@ -103,6 +112,9 @@
     </Compile>
     <Compile Include="Page_a7a.xaml.cs">
       <DependentUpon>Page_a7a.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_a7b.xaml.cs">
+      <DependentUpon>Page_a7b.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page_a8.xaml.cs">
       <DependentUpon>Page_a8.xaml</DependentUpon>
@@ -127,6 +139,15 @@
     </Compile>
     <Compile Include="Page_c6.xaml.cs">
       <DependentUpon>Page_c6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_c7.xaml.cs">
+      <DependentUpon>Page_c7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_c8.xaml.cs">
+      <DependentUpon>Page_c8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_c9.xaml.cs">
+      <DependentUpon>Page_c9.xaml</DependentUpon>
     </Compile>
     <Compile Include="StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
@@ -181,6 +202,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page_a14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page_a2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -197,6 +222,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page_a5a.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_a5b.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page_a6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +239,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page_a7a.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_a7b.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -238,6 +275,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page_c6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_c7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_c8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_c9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -297,6 +346,7 @@
   <ItemGroup>
     <Resource Include="Resources\Background\imageStart.jpg" />
     <Resource Include="Resources\NGK.png" />
+    <Resource Include="Resources\ПО\LogSD.jpg" />
     <Resource Include="Resources\ПО\P01.png" />
     <Resource Include="Resources\ПО\P02.png" />
     <Resource Include="Resources\ПО\P03.png" />
@@ -306,6 +356,7 @@
     <Resource Include="Resources\ПО\P07.png" />
     <Resource Include="Resources\ПО\P08.png" />
     <Resource Include="Resources\ПО\P11.png" />
+    <Resource Include="Resources\ПО\Web02.png" />
     <Resource Include="Resources\Шкаф\таблица клемм.png" />
     <Resource Include="Resources\Шкаф\Шкаф 1.jpg" />
   </ItemGroup>
@@ -388,7 +439,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ПО\Web01.png" />
-    <Resource Include="Resources\ПО\Web02.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ПО\Notebook.png" />
@@ -403,6 +453,23 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Внешняя коммутация КИП-М5 таблица.png" />
+    <Resource Include="Resources\Внешняя коммутация КИП-М5 шкаф.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Общий вид KIP-M256.png" />
+    <Resource Include="Resources\Общий вид KIP-M5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Android\andr00.jpg" />
+    <Resource Include="Resources\Android\andr01.jpg" />
+    <Resource Include="Resources\Android\andr02.jpg" />
+    <Resource Include="Resources\Android\andr03.jpg" />
+    <Resource Include="Resources\Android\andr04.jpg" />
+    <Resource Include="Resources\Android\andr05.jpg" />
+    <Resource Include="Resources\Android\andr06.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

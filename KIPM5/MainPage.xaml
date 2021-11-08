@@ -39,8 +39,8 @@
                 <local:HyperLine Text="Технические характеристики" NavigateUri="Page_a3.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Функциональные возможности" NavigateUri="Page_a4.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Общий вид НГК-КИП-М-х.4" NavigateUri="Page_a5.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Общий вид НГК-КИП-М-256.2" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Общий вид НГК-КИП-М-5.2" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Общий вид НГК-КИП-М-256.2" FontSize="18" NavigateUri="Page_a5a.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Общий вид НГК-КИП-М-5.2" FontSize="18" NavigateUri="Page_a5b.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>
@@ -69,10 +69,10 @@
                 <local:HyperLine Text="Эксплуатационные ограничения" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Порядок установки НГК-КИП-М5" FontSize="18" NavigateUri="Page_a7.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Схема внешней коммутации НГК-КИП-М-256.2" FontSize="18" NavigateUri="Page_a7a.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Схема внешней коммутации НГК-КИП-М-5.2" FontSize="18" NavigateUri="Page_a7a.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Схема внешней коммутации НГК-КИП-М-5.2" FontSize="18" NavigateUri="Page_a7b.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Подключение НГК-КИП-М5" FontSize="18" NavigateUri="Page_a8.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Функциональная работа" FontSize="18" NavigateUri="Page_a9.xaml" Margin="5,10,5,0" Foreground="Black" ColorArrow="Black" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Светодиодная индикация" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Светодиодная индикация" FontSize="18" NavigateUri="Page_a14.xaml" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>
@@ -98,9 +98,9 @@
                 <local:HyperLine Text="Конфигурирование по интерфейсу LAN (Modbus TCP)" FontSize="18" NavigateUri="Page_a12.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Конфигурирование по интерфейсу GPRS (Modbus TCP)" FontSize="18" NavigateUri="Page_a13.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Обучение. Конфигурирование." FontSize="18" NavigateUri="Page_c6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Подключение по Bluetooth." FontSize="18" NavigateUri="Page_c6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Просмотр параметров через Web интерфейс" FontSize="18" NavigateUri="Page_a10.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Настройка ведения журнала событий и его просмотр" FontSize="18" NavigateUri="Page_a10.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Просмотр параметров через Web интерфейс" FontSize="18" NavigateUri="Page_c7.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Ведение и просмотр журнала событий" FontSize="18" NavigateUri="Page_c8.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Подключение по Bluetooth." FontSize="18" NavigateUri="Page_c9.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>
