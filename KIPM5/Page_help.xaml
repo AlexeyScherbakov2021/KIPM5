@@ -1,0 +1,85 @@
+﻿<Page x:Class="KIPM5.Page_help"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KIPM5"
+      mc:Ignorable="d" 
+      d:DesignHeight="780" d:DesignWidth="1300"
+      Title="Page_help">
+
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="col1"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tbRazdel" Margin="330,0,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Background="#FF004991" Foreground="White" Padding="0,10,0,0"><Run Text="Раздел 1. Станция катодной защиты"/><Run Text=" ПРОТЕК(Л)"/></TextBlock>
+        <TextBlock x:Name="tbHeader" Margin="330,29,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="Описание и работа" VerticalAlignment="Top" Height="47" Background="#FF004991" Foreground="White" FontSize="18" Padding="0,5,0,0"/>
+        <TextBlock TextWrapping="Wrap" FontSize="16" Grid.Row="1" Margin="25,29,25,10">
+            <Run Text="Компьютерный тренажерный комплекс по работе с КМО-ИПКЗ-Евро состоит из четырех блоков:"/>
+            <LineBreak/>
+            <Label Margin="18,0,0,0" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="1." Margin="0,0,8,0"/>
+                    <TextBlock Text="Комплекс модульного оборудования ЭХЗ КМОНГК-ИПКЗ-Евро."/>
+                </StackPanel>
+            </Label>
+            <LineBreak/>
+            <Label Margin="18,0,0,0" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="2." Margin="0,0,8,0"/>
+                    <TextBlock Text="Порядок работы с модулем управления НГК-БУ-Евро"/>
+                </StackPanel>
+            </Label>
+            <LineBreak/>
+            <Label Margin="18,0,0,0" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="3." Margin="0,0,8,0"/>
+                    <TextBlock Text="Порядок работы с модулем управления НГК-БУ-Евро 26НР"/>
+                </StackPanel>
+            </Label>
+            <LineBreak/>
+            <Label Margin="18,0,0,0" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="4." Margin="0,0,8,0"/>
+                    <TextBlock Text="Подсистема дистанционного коррозионного мониторинга НГК-СКМ."/>
+                </StackPanel>
+            </Label>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="Вход в лююбой из блоков программы осуществляется из Главного меню."/>
+            <LineBreak/>
+            <Run Text="В каждом блоке содержатся практические задания и тесты. По окончании выполнения тестов формируется отчет,"/>
+            <Run Text="который можно распечатать, используя соответстыующие кнопки экрана."/>
+            <Run Text="Навигационная панель"/>
+            <Image Source="Resources/Button/Previous.png" Height="32" Width="32" Margin="0,1,0,0"/>
+            <Image Source="Resources/Button/home.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Image Source="Resources/Button/LogOut.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Image Source="Resources/Button/Information.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Image Source="Resources/Button/Sound.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Image Source="Resources/Button/Refresh.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Run Text="расположена в нижней части экранов программы. Кнопки панели выполняют следующие функции:"/>
+            <LineBreak/>
+            <Image Source="Resources/Button/Previous.png" Height="32" Width="32" Margin="0,8,0,0"/>
+            <Run Text=" - назад;"/>
+            <LineBreak/>
+            <Image Source="Resources/Button/home.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Run Text=" - возврат в главное меню"/>
+            <LineBreak/>
+            <Image Source="Resources/Button/LogOut.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Run Text=" - выход из программы"/>
+            <LineBreak/>
+            <Image Source="Resources/Button/Information.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Run Text=" - помощь"/>
+            <LineBreak/>
+            <Image Source="Resources/Button/Sound.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Run Text=" - включить/выключить звук"/>
+            <LineBreak/>
+            <Image Source="Resources/Button/Refresh.png" Height="32" Width="32" Margin="0,0,0,0"/>
+            <Run Text=" - повтор (перезагрузка страницы)"/>
+        </TextBlock>
+    </Grid>
+</Page>

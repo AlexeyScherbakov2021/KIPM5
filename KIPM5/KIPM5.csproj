@@ -149,6 +149,9 @@
     <Compile Include="Page_c9.xaml.cs">
       <DependentUpon>Page_c9.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page_help.xaml.cs">
+      <DependentUpon>Page_help.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
@@ -289,6 +292,10 @@
     <Page Include="Page_c9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_help.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="StartPage.xaml">
       <SubType>Designer</SubType>
