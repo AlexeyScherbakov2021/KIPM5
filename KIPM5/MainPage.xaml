@@ -23,7 +23,7 @@
             <RowDefinition Height="129"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid SnapsToDevicePixels="True" Background="#FFE8F3F3" Grid.Row="1" Margin="75,0,5,22">
+        <Grid SnapsToDevicePixels="True" Background="#FFE8F3F3" Grid.Row="1" Margin="27,0,121,22">
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
             </Grid.Effect>
@@ -32,14 +32,15 @@
                     <TextBlock.Background>
                         <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
                     </TextBlock.Background>
-                    <Run Text="Описание и работа НГК-КИП-М5"/>
+                    <Run Text="Описание и технические характеристики"/>
                 </TextBlock>
                 <local:HyperLine Text="Назначение" NavigateUri="Page_a1.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Условное обозначение" NavigateUri="Page_a2.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Технические характеристики" NavigateUri="Page_a3.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Функциональные возможности" NavigateUri="Page_a4.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Общий вид" NavigateUri="Page_a5.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Эксплуатационные ограничения" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Общий вид НГК-КИП-М-х.4" NavigateUri="Page_a5.xaml" FontSize="18" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Общий вид НГК-КИП-М-256.2" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Общий вид НГК-КИП-М-5.2" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>
@@ -53,7 +54,7 @@
                 <TextBlock x:Name="tbTest1" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,6.36,19.999,6.36" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" Grid.Column="1" Visibility="Hidden"/>
             </Grid>
         </Grid>
-        <Grid Margin="20,0,5,22" Grid.Column="1" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True">
+        <Grid Margin="327,0,140,22" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True" Grid.ColumnSpan="2">
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
             </Grid.Effect>
@@ -62,17 +63,16 @@
                     <TextBlock.Background>
                         <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
                     </TextBlock.Background>
-                    <Run Text="Использование по назначению"/>
+                    <Run Text="Порядок подключения КИП-М5"/>
                 </TextBlock>
 
-                <local:HyperLine Text="Порядок установки НГК-КИП-М5" FontSize="18" NavigateUri="Page_a7.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Подключение кабелей" FontSize="18" NavigateUri="Page_a7a.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Подключение НГК-КИП-М5" FontSize="18" NavigateUri="Page_a8.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Функциональная работа" FontSize="18" NavigateUri="Page_a9.xaml" Margin="5,10,4,0" Foreground="Black" ColorArrow="Black" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Конфигурирование" FontSize="18" NavigateUri="Page_a10.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Конфигурирование по интерфейсу RS-485 (Modbus RTU)" FontSize="18" NavigateUri="Page_a11.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Конфигурирование по интерфейсу LAN (Modbus TCP)" FontSize="18" NavigateUri="Page_a12.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Конфигурирование по интерфейсу GPRS (Modbus TCP)" FontSize="18" NavigateUri="Page_a13.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Эксплуатационные ограничения" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Порядок установки НГК-КИП-М5" FontSize="18" NavigateUri="Page_a7.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Схема внешней коммутации НГК-КИП-М-256.2" FontSize="18" NavigateUri="Page_a7a.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Схема внешней коммутации НГК-КИП-М-5.2" FontSize="18" NavigateUri="Page_a7a.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Подключение НГК-КИП-М5" FontSize="18" NavigateUri="Page_a8.xaml"  Margin="5,10,5,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Функциональная работа" FontSize="18" NavigateUri="Page_a9.xaml" Margin="5,10,5,0" Foreground="Black" ColorArrow="Black" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Светодиодная индикация" FontSize="18" NavigateUri="Page_a6.xaml" Margin="5,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>
@@ -82,7 +82,7 @@
                 <TextBlock x:Name="tbTest2" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" Visibility="Hidden"/>
             </Grid>
         </Grid>
-        <Grid Margin="20,0,5,22" Grid.Column="2" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True">
+        <Grid Margin="262,0,190,22" Grid.Column="1" Grid.Row="1" SnapsToDevicePixels="True" Grid.ColumnSpan="2">
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
             </Grid.Effect>
@@ -91,15 +91,16 @@
                     <TextBlock.Background>
                         <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
                     </TextBlock.Background>
-                    <TextBlock.Text>Техническое обслуживание и текущий ремонт ТОиР</TextBlock.Text>
+                    <TextBlock.Text>Работа и конфигурирование</TextBlock.Text>
                 </TextBlock>
-                <local:HyperLine Text="Общие указания и меры безопасности" FontSize="18" NavigateUri="Page_c1.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Текущий ремонт" FontSize="18" NavigateUri="Page_c2.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Консервация и хранение" FontSize="18" NavigateUri="Page_c3.xaml" Margin="5,10,4,0" Foreground="Black" ColorArrow="Black" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Транспортирование" FontSize="18" NavigateUri="Page_c4.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Утилизация" FontSize="18" NavigateUri="Page_c5.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
-                <local:HyperLine Text="Обучение. Порядок включения." FontSize="18" NavigateUri="Page_c5.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование" FontSize="18" NavigateUri="Page_a10.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование по интерфейсу RS-485 (Modbus RTU)" FontSize="18" NavigateUri="Page_a11.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование по интерфейсу LAN (Modbus TCP)" FontSize="18" NavigateUri="Page_a12.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Конфигурирование по интерфейсу GPRS (Modbus TCP)" FontSize="18" NavigateUri="Page_a13.xaml" Margin="19,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
                 <local:HyperLine Text="Обучение. Конфигурирование." FontSize="18" NavigateUri="Page_c6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Подключение по Bluetooth." FontSize="18" NavigateUri="Page_c6.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Просмотр параметров через Web интерфейс" FontSize="18" NavigateUri="Page_a10.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Настройка ведения журнала событий и его просмотр" FontSize="18" NavigateUri="Page_a10.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>
@@ -109,28 +110,30 @@
                 <TextBlock x:Name="tbTest3" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" Visibility="Hidden" />
             </Grid>
         </Grid>
-        <Grid Margin="20,0,20,22" Grid.Column="3" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True" Visibility="Collapsed">
+        <Grid Margin="191,0,22,22" Grid.Column="2" Grid.Row="1" Background="#FFE8F3F3" SnapsToDevicePixels="True" Grid.ColumnSpan="2">
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF575757" BlurRadius="18"/>
             </Grid.Effect>
             <StackPanel Margin="0" Background="#FFE8F3F3">
                 <TextBlock TextWrapping="Wrap" Foreground="White" FontFamily="Arial" FontSize="16" TextAlignment="Center" Padding="5,10" VerticalAlignment="Center" FontWeight="Bold">
                     <TextBlock.Background>
-                        <ImageBrush ImageSource="Resources/Background/siniy_goluboj_fon_2560x1600.jpg" Stretch="None"/>
+                        <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
                     </TextBlock.Background>
-                    <Run Text="Подсистема дистанционного коррозионного мониторнига"/>
-                    <LineBreak/>
-                    <Run Text="НГК-СКМ"/>
+                    <Run Text="Техническое обслуживание и текущий ремонт ТОиР"/>
 
                 </TextBlock>
-                <local:HyperLine Text="Описание и работа" FontSize="18" NavigateUri="SectionD/Page_d1.xaml" Margin="4,10,5,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Общие указания и меры безопасности" FontSize="18" NavigateUri="Page_c1.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Текущий ремонт" FontSize="18" NavigateUri="Page_c2.xaml"  Margin="5,10,4,0"  Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Консервация и хранение" FontSize="18" NavigateUri="Page_c3.xaml" Margin="5,10,4,0" Foreground="Black" ColorArrow="Black" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Транспортирование" FontSize="18" NavigateUri="Page_c4.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
+                <local:HyperLine Text="Утилизация" FontSize="18" NavigateUri="Page_c5.xaml" Margin="5,10,4,0" Foreground="#FF000000" ColorArrow="#FF000000" TextOptions.TextFormattingMode="Display" FontFamily="Arial Narrow"/>
             </StackPanel>
             <Grid DockPanel.Dock="Bottom" Height="34" VerticalAlignment="Bottom" UseLayoutRounding="False" Margin="0">
                 <Grid.Background>
-                    <ImageBrush ImageSource="Resources/Background/siniy_goluboj_fon_2560x1600.jpg" Stretch="None"/>
+                    <ImageBrush ImageSource="Resources/Background/1618570012_34-funart_pro-p-oboi-fon-sine-zelenii-fon-34.jpg" Stretch="None"/>
                 </Grid.Background>
-                <TextBlock x:Name="tbZad4" Text="Задания" Foreground="White" VerticalAlignment="Center" Margin="11,0,0,0" FontSize="16" HorizontalAlignment="Left" Cursor="Hand"/>
-                <TextBlock x:Name="tbTest4" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" />
+                <TextBlock x:Name="tbZad4" Text="Задания" Foreground="White" VerticalAlignment="Center" Margin="11,0,0,0" FontSize="16" HorizontalAlignment="Left" Cursor="Hand" Visibility="Hidden"/>
+                <TextBlock x:Name="tbTest4" Text="Тест" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16" Cursor="Hand" HorizontalAlignment="Right" Visibility="Hidden" />
             </Grid>
         </Grid>
         <Grid Margin="0" Grid.ColumnSpan="4" SnapsToDevicePixels="True">

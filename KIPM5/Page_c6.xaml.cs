@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -82,6 +83,13 @@ namespace KIPM5
         }
 
 
+        private void CbCOM_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(cbCOM.SelectedIndex == 1)
+                ExecuteStep();
+        }
+
+
         //--------------------------------------------------------------------------------------------------
         // выполенение шагов
         //--------------------------------------------------------------------------------------------------
@@ -92,165 +100,164 @@ namespace KIPM5
             switch (Step)
             {
                 case 0:
-                    // 
+                    canvas.Opacity = 1;
                     gridLabel.Visibility = Visibility.Visible;
                     tbStepText.Inlines.Clear();
                     run = new Run("Шаг 1. ");
                     run.FontWeight = FontWeights.Bold;
                     tbStepText.Inlines.Add(run);
-                    tbStepText.Inlines.Add(new Run("Установите все автоматические выключатели сети в положение "));
-                    run = new Run("ОТКЛ.");
-                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("Включите автоматический выключатель для подачи питания на КИП-М5."));
 
-                    //path0.Visibility = Visibility.Visible;
-                    //Page_Frame.player.Open(new Uri("pack://siteoforigin:,,,/Sound/SectionA/a2_6_1.mp3"));
-                    //Page_Frame.player.Play();
+                    pathAvtomat.Visibility = Visibility.Visible;
                     break;
 
                 case 1:
-                    // переход к DIN-рейке
-                    //path0.Visibility = Visibility.Hidden;
-                    //BeginStoryboard((Storyboard)Resources["Storyboard1"]);
+                    pathAvtomat.Visibility = Visibility.Hidden;
+                    new clAnimation(imgAvtomat, @"/KIPM5;component/Resources/Автомат1 DIN/avtomat", 0, 5, 50, CallbackAnimation, 0, 0, enumFormatFile.JPG);
                     break;
 
                 case 2:
-                    //path5.Visibility = Visibility.Visible;
-                    //btNext.Visibility = Visibility.Visible;
-                    break;
-
-                case 3:
-                    // выключение всех автоматов
-                    gridLabel.Visibility = Visibility.Hidden;
-                    //path5.Visibility = Visibility.Hidden;
-                    //new clanimation(imgavto1, "автомат1 din/img", 6, 6, 50, executestep, 0, 0, enumformatfile.jpg, true);
-                    break;
-
-                case 4:
-                    //new clAnimation(imageDIN, "Автомат DIN/Avtom", 21, 21, 50, ExecuteStep, 0, 0, enumFormatFile.JPG, true);
-                    break;
-
-                case 5:
-                    btNext.Visibility = Visibility.Visible;
-                    break;
-
-                case 6:
-                    // передвижение к модулям БП
-                    //BeginStoryboard((Storyboard)Resources["Storyboard9"]);
-                    btNext.Visibility = Visibility.Hidden;
-                    gridLabel.Visibility = Visibility.Visible;
-                    tbStepText.Inlines.Clear();
-                    tbStepText.Inlines.Add(new Run("Допускается кратковременное остаточное свечение индикаторов "));
-                    run = new Run("АВАРИЯ ");
-                    run.FontWeight = FontWeights.Bold;
-                    tbStepText.Inlines.Add(run);
-                    tbStepText.Inlines.Add(new Run("на модулях НГК-БП-Евро."));
-                    //Page_Frame.player.Open(new Uri("pack://siteoforigin:,,,/Sound/SectionA/a2_6_2.mp3"));
-                    //Page_Frame.player.Play();
-                    break;
-
-                case 7:
-                    btNext.Visibility = Visibility.Visible;
-                    break;
-
-                case 8:
-                    btNext.Visibility = Visibility.Hidden;
-                    //BeginStoryboard((Storyboard)Resources["Storyboard7"]);
-                    break;
-
-                case 9:
-                    //path14.Visibility = Visibility.Visible;
                     tbStepText.Inlines.Clear();
                     run = new Run("Шаг 2. ");
                     run.FontWeight = FontWeights.Bold;
                     tbStepText.Inlines.Add(run);
-                    tbStepText.Inlines.Add(new Run("Переведите переключатель "));
-                    run = new Run("АКБ БУ, ");
-                    run.FontWeight = FontWeights.Bold;
-                    tbStepText.Inlines.Add(run);
-                    tbStepText.Inlines.Add(new Run("расположенный на передней панели мокдля управления, в положение "));
-                    run = new Run("ВЫКЛ.");
-                    run.FontWeight = FontWeights.Bold;
-                    tbStepText.Inlines.Add(run);
-                    //Page_Frame.player.Open(new Uri("pack://siteoforigin:,,,/Sound/SectionA/a2_6_3.mp3"));
-                    //Page_Frame.player.Play();
+                    tbStepText.Inlines.Add(new Run("Подключите кабель USB к компьютеру."));
+
+                    PowerLED.Visibility = Visibility.Visible;
+                    VULED.Visibility = Visibility.Visible;
+                    PollLED.Visibility = Visibility.Visible;
+                    pathUSB.Visibility = Visibility.Visible;
                     break;
 
-                case 10:
-                    //path14.Visibility = Visibility.Hidden;
-                    //new clAnimation(imageSwitch3, "Переключатель/Switch", 1, 6, 50, ExecuteStep, 0, 0, enumFormatFile.PNG);
+                case 3:
+                    pathUSB.Visibility = Visibility.Hidden;
+                    BeginStoryboard((Storyboard)Resources["Storyboard1"]);
                     break;
 
-                case 11:
-                    btNext.Visibility = Visibility.Visible;
-                    tbStepText.Inlines.Clear();
-                    run = new Run("ВНИМАНИЕ! ");
-                    run.FontWeight = FontWeights.Bold;
-                    tbStepText.Inlines.Add(run);
-                    tbStepText.Inlines.Add(new Run("Во избежание разряда аккумулторных батарей при " +
-                        "транспортировании, хранении КМО или отключении сетевого электропитания более чем на 24 ч " +
-                        "переключатель АКБ БУ на передней панели НГК-БУ-Евро СКЗ 1 должен находится:"));
-                    tbStepText.Inlines.Add(new LineBreak());
-                    tbStepText.Inlines.Add(new Run("- при наличии сетевого напряжения на модуле НГК-БУ-ЕВРО СКЗ 1 - в положение ВКЛ."));
-                    tbStepText.Inlines.Add(new LineBreak());
-                    tbStepText.Inlines.Add(new Run("- при отсутствии сетевого напряжения на модуле НГК-БУ-ЕВРО СКЗ 1 - в положение ВЫКЛ."));
-                    //Page_Frame.player.Open(new Uri("pack://siteoforigin:,,,/Sound/SectionA/a2_6_4.mp3"));
-                    //Page_Frame.player.Play();
-                    break;
-
-                case 12:
-                    // перемещение к общему виду шкафа
-                    gridLabel.Visibility = Visibility.Hidden;
-                    btNext.Visibility = Visibility.Hidden;
-                    //BeginStoryboard((Storyboard)Resources["Storyboard2"]);
-                    break;
-
-                case 13:
-                    gridLabel.Visibility = Visibility.Visible;
+                case 4:
                     tbStepText.Inlines.Clear();
                     run = new Run("Шаг 3. ");
                     run.FontWeight = FontWeights.Bold;
                     tbStepText.Inlines.Add(run);
-                    tbStepText.Inlines.Add(new Run("Установите все вводные автоматические выключатели питающих сетей в положение "));
-                    run = new Run("ОТКЛ.");
+                    tbStepText.Inlines.Add(new Run("Запустите на компьютере ПО «Конфигуратор НГК КИП-М»"));
+
+                    pathComp.Visibility = Visibility.Visible;
+
+                    break;
+
+                case 5:
+                    pathComp.Visibility = Visibility.Hidden;
+                    BeginStoryboard((Storyboard)Resources["Storyboard2"]);
+
+                    break;
+
+                case 6:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 4. ");
                     run.FontWeight = FontWeights.Bold;
                     tbStepText.Inlines.Add(run);
-                    //path1.Visibility = Visibility.Visible;
-                    //Page_Frame.player.Open(new Uri("pack://siteoforigin:,,,/Sound/SectionA/a2_6_5.mp3"));
-                    //Page_Frame.player.Play();
+                    tbStepText.Inlines.Add(new Run("Выберите порт COM4. (Обновить список, если кабель USB подключался после запуска программы)."));
+
+                    cbCOM.IsEnabled = true;
+                    pathCOMPort.Visibility = Visibility.Visible;
+
+                    break;
+
+                case 7:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 5. ");
+                    run.FontWeight = FontWeights.Bold;
+                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("Нажмите кнопку «Подключиться»."));
+
+                    pathCOMPort.Visibility = Visibility.Hidden;
+                    pathConnect.Visibility = Visibility.Visible;
+
+                    break;
+
+                case 8:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 6. ");
+                    run.FontWeight = FontWeights.Bold;
+                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("Нажмите кнопку «Настройки» для перехода в окно настроек."));
+
+                    pathConnect.Visibility = Visibility.Hidden;
+                    imagePO.Source = new BitmapImage(new Uri("Resources/ПО/P02.png", UriKind.Relative)); ;
+                    pathSettings.Visibility = Visibility.Visible;
+                    break;
+
+                case 9:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 7. ");
+                    run.FontWeight = FontWeights.Bold;
+                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("Установите опцию «Подключение по GSM(Modbus TCP)». При этом ниже появится " +
+                        "закладка «GSM(Modbus TCP)»."));
+
+                    pathSettings.Visibility = Visibility.Hidden;
+                    pathGSMCheck.Visibility = Visibility.Visible;
+                    imagePO.Source = new BitmapImage(new Uri("Resources/ПО/P03.png", UriKind.Relative)); ;
+                    break;
+
+                case 10:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 8. ");
+                    run.FontWeight = FontWeights.Bold;
+                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("Перейдите в закладку «GSM(Modbus TCP)»."));
+
+                    pathGSMCheck.Visibility = Visibility.Hidden;
+                    pathGSMTab.Visibility = Visibility.Visible;
+                    imagePO.Source = new BitmapImage(new Uri("Resources/ПО/P04.png", UriKind.Relative)); ;
+
+                    break;
+
+                case 11:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 9. ");
+                    run.FontWeight = FontWeights.Bold;
+                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("Для записи основных параметров нажмите кнопку «Записать основные параметры»."));
+
+                    pathGSMTab.Visibility = Visibility.Hidden;
+                    pathSaveMain.Visibility = Visibility.Visible;
+                    imagePO.Source = new BitmapImage(new Uri("Resources/ПО/P05.png", UriKind.Relative)); ;
+                    break;
+
+                case 12:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 10. ");
+                    run.FontWeight = FontWeights.Bold;
+                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("В консоли должны появиться две строки. Первая - команда, вторая эхо ответ от " +
+                        "устройства. Если ответ не поступил, повторите запись. Далее надмите кнопку " +
+                        "«Записать настройки соединения»."));
+
+                    pathSaveMain.Visibility = Visibility.Hidden;
+                    pathSaveConnection.Visibility = Visibility.Visible;
+                    imagePO.Source = new BitmapImage(new Uri("Resources/ПО/P06.png", UriKind.Relative)); ;
+                    break;
+
+                case 13:
+                    tbStepText.Inlines.Clear();
+                    run = new Run("Шаг 11. ");
+                    run.FontWeight = FontWeights.Bold;
+                    tbStepText.Inlines.Add(run);
+                    tbStepText.Inlines.Add(new Run("В консоли должны появятся еще две строки, подтверждающие запись. Далее нажмите " +
+                        "кнопку «Сохранить данные и перезагрузить устройство», чтобы КИП-М5 применил настройки."));
+
+                    pathSaveConnection.Visibility = Visibility.Hidden;
+                    pathReboot.Visibility = Visibility.Visible;
+                    imagePO.Source = new BitmapImage(new Uri("Resources/ПО/P07.png", UriKind.Relative)); ;
                     break;
 
                 case 14:
-                    // открытие нижней дверцы
-                    //path1.Visibility = Visibility.Hidden;
-                    //new clAnimation(imageDoor, "Дверца выключателей/door", 1, 11, 50, ExecuteStep, 0, 0, enumFormatFile.PNG);
-                    break;
-
-                case 15:
-                    // переход к выключателям сети
-                    //BeginStoryboard((Storyboard)Resources["Storyboard3"]);
-                    //imageAvto.Visibility = Visibility.Visible;
-                    break;
-
-                case 16:
-                    //path2.Visibility = Visibility.Visible;
-                    break;
-
-                case 17:
+                    pathReboot.Visibility = Visibility.Hidden;
+                    imagePO.Source = new BitmapImage(new Uri("Resources/ПО/P08.png", UriKind.Relative)); ;
+                    GPRSLED.Visibility = Visibility.Visible;
                     gridLabel.Visibility = Visibility.Hidden;
-                    //path2.Visibility = Visibility.Hidden;
-                    //new clAnimation(imageAvto, "Автомат/Power", 11, 11, 50, ExecuteStep, 0, 1000, enumFormatFile.JPG, true);
-                    break;
-
-                case 18:
-                    //PowerLED1.Visibility = Visibility.Hidden;
-                    //PowerLED2.Visibility = Visibility.Hidden;
-                    //BeginStoryboard((Storyboard)Resources["Storyboard2"]);
-                    break;
-
-                case 19:
                     gridComplete.Visibility = Visibility.Visible;
-                    //Page_Frame.player.Open(new Uri("pack://siteoforigin:,,,/Sound/SectionA/a2_6_6.mp3"));
-                    //Page_Frame.player.Play();
                     break;
 
             }

@@ -9,25 +9,6 @@
       Title="Page_c6">
 
     <Page.Resources>
-        <Style x:Key="FlashLED" TargetType="{x:Type Ellipse}">
-            <Style.Resources>
-                <Storyboard x:Key="OnLoaded1" RepeatBehavior="Forever" AutoReverse="True">
-                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="{x:Null}">
-                        <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                    </DoubleAnimationUsingKeyFrames>
-                </Storyboard>
-            </Style.Resources>
-            <Style.Triggers>
-                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-                    <BeginStoryboard>
-                        <Storyboard TargetProperty="Opacity">
-                            <DoubleAnimation From="1" To="0" Duration="0:0:0.2" RepeatBehavior="Forever" AutoReverse="True"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                    <BeginStoryboard Storyboard="{StaticResource OnLoaded1}"/>
-                </EventTrigger>
-            </Style.Triggers>
-        </Style>
 
         <Style x:Key="PathLEDStyleLocal" TargetType="{x:Type Path}">
             <Style.Resources>
@@ -66,73 +47,25 @@
             </Style.Triggers>
         </Style>
         <Storyboard x:Key="Storyboard1" Completed="Storyboard_Completed">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.155"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-297"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1167"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="30.75"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Storyboard2" Completed="Storyboard_Completed">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-529"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-1113"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="grid2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.15"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.15"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="Storyboard3"  Completed="Storyboard_Completed">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="canvas">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid2">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="canvas">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid2">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1695"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-216"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="Storyboard7" Completed="Storyboard_Completed">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.45"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.45"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-443"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-373"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="Storyboard9" Completed="Storyboard_Completed">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-117"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-646"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
@@ -144,30 +77,35 @@
             <RowDefinition Height="600"/>
         </Grid.RowDefinitions>
         <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Margin="20,26,20,0">
-            <Run Text="Порядок конфигурирования. Для выполнения действий кликайте на выделенных элементах."/>
+            <Run Text="Пример настройки конфигурации КИП-М5. Для выполнения действий кликайте на выделенных элементах."/>
         </TextBlock>
-        <Grid x:Name="grid1" Margin="10,72,20,-40" Grid.Row="0" ClipToBounds="True">
-            <Canvas Margin="0,0,-30,-30" x:Name="canvas" ClipToBounds="True" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="553" Width="1300">
-                <Image HorizontalAlignment="Left" Source="Resources/КИП5/K2.PNG" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Left="48" Canvas.Top="51" Height="474">
+        <Grid x:Name="grid1" Margin="10,52.28,20,-40" Grid.Row="0" ClipToBounds="True">
+            <Canvas x:Name="canvas" ClipToBounds="True" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="599" Width="1290" Opacity="0.25">
+                <Image Source="Resources/DIN.png" Canvas.Top="240" Canvas.Left="-293" Height="107.92" Width="797.141"/>
+                <Image x:Name="imgAvtomat" Source="Resources/Автомат1 DIN/avtomat0.jpg" Canvas.Left="24" Canvas.Top="167.5" Height="236.833" Width="113.5">
                     <Image.Effect>
                         <DropShadowEffect Color="#FFCFCFCF" ShadowDepth="1" BlurRadius="100" Direction="362"/>
                     </Image.Effect>
                 </Image>
-                <Path x:Name="PowerBAVRLED" Data="M560.625,37.058543 C560.64063,36.095363 561.2344,35.173035 562.48956,35.188908 563.72002,35.204469 564.37639,36.21963 564.39644,37.115988 564.41309,37.860846 563.78258,39.010349 562.52105,39.021398 561.3282,39.031846 560.60937,38.021723 560.625,37.058543 z" Fill="Lime" HorizontalAlignment="Left" Height="13" Stretch="Fill" VerticalAlignment="Top" Width="13" Style="{DynamicResource PathLEDStyleLocal}" Canvas.Left="1145.245" Canvas.Top="577.324" Visibility="Hidden"/>
-                <Path x:Name="SKZ1LED" Data="M560.625,37.058563 C560.64063,36.095383 561.2344,35.173035 562.48956,35.188908 563.72002,35.204469 564.37639,36.21963 564.39644,37.115988 564.41309,37.860846 563.78258,39.010349 562.52105,39.021398 561.3282,39.031846 560.60937,38.021743 560.625,37.058563 z" Fill="Lime" HorizontalAlignment="Left" Height="13" Stretch="Fill" VerticalAlignment="Top" Width="13" Style="{DynamicResource PathLEDStyleLocal}" Canvas.Left="1145.458" Canvas.Top="729.843" Visibility="Hidden"/>
-                <Image Source="Resources/ПО/P01.png" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="419" Canvas.Top="37" Height="501" Width="765">
-                    <Image.RenderTransform>
+                <Image HorizontalAlignment="Left" Source="Resources/КИП5/K2.PNG" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Left="192.5" Canvas.Top="51" Height="474">
+                    <Image.Effect>
+                        <DropShadowEffect Color="#FFCFCFCF" ShadowDepth="1" BlurRadius="100" Direction="362"/>
+                    </Image.Effect>
+                </Image>
+                <Path x:Name="PowerLED" Data="M560.625,37.058543 C560.64063,36.095363 561.2344,35.173035 562.48956,35.188908 563.72002,35.204469 564.37639,36.21963 564.39644,37.115988 564.41309,37.860846 563.78258,39.010349 562.52105,39.021398 561.3282,39.031846 560.60937,38.021723 560.625,37.058543 z" Fill="Lime" HorizontalAlignment="Left" Height="10" Stretch="Fill" VerticalAlignment="Top" Width="10" Style="{DynamicResource PathLEDStyleLocal}" Canvas.Left="266" Canvas.Top="218.5" Visibility="Hidden"/>
+                <Path x:Name="VULED" Data="M560.625,37.058563 C560.64063,36.095383 561.2344,35.173035 562.48956,35.188908 563.72002,35.204469 564.37639,36.21963 564.39644,37.115988 564.41309,37.860846 563.78258,39.010349 562.52105,39.021398 561.3282,39.031846 560.60937,38.021743 560.625,37.058563 z" Fill="Lime" HorizontalAlignment="Left" Height="10" Stretch="Fill" VerticalAlignment="Top" Width="10" Style="{DynamicResource PathLEDStyleLocal}" Canvas.Left="266" Canvas.Top="238" Visibility="Hidden"/>
+                <Path x:Name="PollLED" Data="M560.625,37.058563 C560.64063,36.095383 561.2344,35.173035 562.48956,35.188908 563.72002,35.204469 564.37639,36.21963 564.39644,37.115988 564.41309,37.860846 563.78258,39.010349 562.52105,39.021398 561.3282,39.031846 560.60937,38.021743 560.625,37.058563 z" Fill="Lime" HorizontalAlignment="Left" Height="10" Stretch="Fill" VerticalAlignment="Top" Width="10" Style="{DynamicResource PathLEDStyleLocal}" Canvas.Left="278" Canvas.Top="218.5" Visibility="Hidden"/>
+                <Path x:Name="GPRSLED" Data="M560.625,37.058563 C560.64063,36.095383 561.2344,35.173035 562.48956,35.188908 563.72002,35.204469 564.37639,36.21963 564.39644,37.115988 564.41309,37.860846 563.78258,39.010349 562.52105,39.021398 561.3282,39.031846 560.60937,38.021743 560.625,37.058563 z" Fill="Lime" HorizontalAlignment="Left" Height="10" Stretch="Fill" VerticalAlignment="Top" Width="10" Style="{DynamicResource PathLEDStyleLocal}" Canvas.Left="278" Canvas.Top="238" Visibility="Hidden"/>
+                <Grid x:Name="grid" Height="288.049" Canvas.Left="261.8" Canvas.Top="157.1" Width="396" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform ScaleX="0.5" ScaleY="0.42"/>
+                            <ScaleTransform/>
                             <SkewTransform/>
                             <RotateTransform/>
-                            <TranslateTransform X="-38.3" Y="10.4"/>
+                            <TranslateTransform/>
                         </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Path x:Name="SKZ2LED" Data="M560.625,37.058563 C560.64063,36.095383 561.2344,35.173035 562.48956,35.188908 563.72002,35.204469 564.37639,36.21963 564.39644,37.115988 564.41309,37.860846 563.78258,39.010349 562.52105,39.021398 561.3282,39.031846 560.60937,38.021743 560.625,37.058563 z" Fill="Lime" HorizontalAlignment="Left" Height="13" Stretch="Fill" VerticalAlignment="Top" Width="13" Style="{DynamicResource PathLEDStyleLocal}" Canvas.Left="1145.245" Canvas.Top="678.874" Visibility="Hidden"/>
-                <Grid Height="288.049" Canvas.Left="117.037" Canvas.Top="157.993" Width="396">
-                    <Path Data="M116.85865,193.30943 C117.45278,190.78437 116.1456,165.63241 116.85828,163.75156 117.88171,161.0506 116.77573,176.88783 119.1762,176.41922 134.62614,173.40311 130.74723,175.43931 145.44109,181.54647 161.40603,188.18193 192.3059,211.10441 212.90582,238.85258 246.67851,284.34454 241.05904,408.55917 302.85879,446.36111 367.40177,485.84104 374.30979,470.32305 431.26494,483.35876 491.0047,497.0318 532.28816,497.93824 571.55857,498.23866" Stretch="Fill" StrokeThickness="7" Stroke="#FF94A9B4" Margin="1.5,0,36.505,5">
+                    </Grid.RenderTransform>
+                    <Path Data="M116.85865,193.30943 C117.45278,190.78437 116.1456,165.63241 116.85828,163.75156 117.88171,161.0506 116.77573,176.88783 119.1762,176.41922 134.62614,173.40311 130.74723,175.43931 145.44109,181.54647 161.40603,188.18193 192.3059,211.10441 212.90582,238.85258 246.67851,284.34454 241.05904,408.55917 302.85879,446.36111 367.40177,485.84104 374.30979,470.32305 431.26494,483.35876 491.0047,497.0318 532.28816,497.93824 571.55857,498.23866" Stretch="Fill" StrokeThickness="7" Stroke="#FF94A9B4" Margin="0,0,0,5">
                         <Path.Effect>
                             <DropShadowEffect Color="#FFB8B8B8"/>
                         </Path.Effect>
@@ -184,11 +122,81 @@
                     </Rectangle>
 
                 </Grid>
-                <Image Source="Resources/ПО/Notebook.png" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="510.5" Canvas.Top="179.5" Height="311" Width="477" Margin="0,0,0,-18">
+                <Image Source="Resources/ПО/Notebook.png" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="654" Canvas.Top="179.5" Height="311" Width="477">
                     <Image.Effect>
                         <DropShadowEffect Color="#FFCFCFCF" ShadowDepth="11" BlurRadius="49"/>
                     </Image.Effect>
                 </Image>
+                <Grid x:Name="grid2" Canvas.Left="421.141" Canvas.Top="22" Height="561.5" Width="862.359" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.45" ScaleY="0.37"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="34.8" Y="-6"/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Image x:Name="imagePO" Source="Resources/ПО/P01.png"/>
+                    <Path x:Name="pathCOMPort" Data="M3.1666667,2.5 L94.985242,2.5 L94.985242,28.926675 L2.9089545,28.962509 z" Stroke="#FF9FF2FF" StrokeThickness="5" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="182,106,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="95" Stretch="Fill" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path x:Name="pathConnect" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="5" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="332.5,106.835,0,0" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path x:Name="pathSettings" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="5" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="17,130.835,0,0" Height="59.5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151.5" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path x:Name="pathGSMCheck" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="5" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="387.5,263.335,0,0" Height="24.5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="23" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path x:Name="pathGSMTab" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="5" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="284,345.335,0,0" Height="28.5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99.5" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path x:Name="pathSaveMain" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="5" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="264.556,299.389,0,0" Height="26.473" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171.722" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path x:Name="pathSaveConnection" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="5" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="264.556,495.389,0,0" Height="26.473" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171.722" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <Path x:Name="pathReboot" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="5" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Margin="557.223,504.722,0,0" Height="26.473" HorizontalAlignment="Left" VerticalAlignment="Top" Width="258.389" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden">
+                        <Path.Fill>
+                            <SolidColorBrush Color="Black" Opacity="0"/>
+                        </Path.Fill>
+                    </Path>
+                    <ComboBox x:Name="cbCOM" BorderBrush="Black" SelectedIndex="0" Padding="4,2" Visibility="Visible" Height="17" Width="84" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="187.5,111.5,0,0" FontSize="9" IsEnabled="False" SelectionChanged="CbCOM_SelectionChanged">
+                        <ComboBoxItem Content="COM1"/>
+                        <ComboBoxItem Content="COM4"/>
+                    </ComboBox>
+                </Grid>
+                <Path x:Name="pathAvtomat" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Height="140.663" Canvas.Left="12.338" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="19" Canvas.Top="271.5" Width="124.326" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Visibility="Hidden">
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="pathUSB" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Height="71.663" Canvas.Left="577.815" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="15" Canvas.Top="399" Width="107.826" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Visibility="Hidden">
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="pathComp" Data="M19.00011,162 L135.99967,162 135.99967,407.83323 18.666683,408.16657 z" Height="243.663" Canvas.Left="686.815" Stretch="Fill" Stroke="#FF9FF2FF" StrokeThickness="15" Canvas.Top="178.337" Width="405.826" MouseLeftButtonUp="Path_MouseLeftButtonUp" Style="{StaticResource PathFlash}" Cursor="Hand" Visibility="Hidden">
+                    <Path.Fill>
+                        <SolidColorBrush Color="Black" Opacity="0"/>
+                    </Path.Fill>
+                </Path>
 
             </Canvas>
             <!--<Label x:Name="StepLabel" FontSize="24" FontFamily="Arial Narrow" BorderBrush="#FF0009CB" Background="#FFC4E2FF" Padding="20,5,5,5" BorderThickness="2" VerticalAlignment="Top">-->
@@ -204,10 +212,10 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle RadiusX="5" RadiusY="5" Fill="#FF19A9B8" Grid.ColumnSpan="3" Margin="0"/>
                 <Rectangle Fill="#FF89ECE7" Margin="0" Grid.Column="1"/>
-                <TextBlock x:Name="tbStepText"  FontSize="20" TextWrapping="Wrap" Margin="10,5" Grid.Column="1" FontFamily="Frank Ruhl Hofshi"><Run Text="Шаг 1. Проверьте, что все автоматические выключатели сети находятся в положении "/><Run Text=" "/><Run Text="ОТКЛ." FontWeight="Bold"/></TextBlock>
+                <TextBlock x:Name="tbStepText"  FontSize="20" TextWrapping="Wrap" Margin="10,5" Grid.Column="1" FontFamily="Arial"/>
             </Grid>
             <!--</Label>-->
-            <Grid x:Name="gridComplete" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="536,85.433,0,0" Background="#FF34A8EA" Visibility="Hidden">
+            <Grid x:Name="gridComplete" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="356,215.933,0,0" Background="#FF34A8EA" Visibility="Hidden">
                 <Grid.Effect>
                     <DropShadowEffect Color="#FF9B9B9B" ShadowDepth="9" BlurRadius="31"/>
                 </Grid.Effect>
@@ -217,11 +225,11 @@
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Margin="20,20,10,20" VerticalAlignment="Top" Source="Resources/Button/Information.png"/>
                 <TextBlock Grid.Column="1" Margin="20,15.617" TextWrapping="Wrap" Foreground="White" FontSize="36" FontWeight="Bold" VerticalAlignment="Center">
-                    <Run  Text="Комплекс модульного оборудования выключен!"/>
+                    <Run  Text="Новые настройки записаны в КИП-М5."/>
                 </TextBlock>
             </Grid>
         </Grid>
-        <Button x:Name="btStart" HorizontalAlignment="Center" Height="140" Margin="580,265,580,195" VerticalAlignment="Center" Width="140" Style="{DynamicResource StartButtonStyle}" Click="BtStart_Click" Background="#FFDDDDDD" d:IsHidden="True">
+        <Button x:Name="btStart" HorizontalAlignment="Center" Height="140" Margin="0" VerticalAlignment="Center" Width="140" Style="{DynamicResource StartButtonStyle}" Click="BtStart_Click" Background="#FFDDDDDD" d:IsHidden="True">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="10" Color="#FFAEAEAE"/>
             </Button.Effect>

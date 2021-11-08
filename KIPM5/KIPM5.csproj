@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Amination.cs" />
     <Compile Include="Page_a10.xaml.cs">
       <DependentUpon>Page_a10.xaml</DependentUpon>
     </Compile>
@@ -296,6 +297,15 @@
   <ItemGroup>
     <Resource Include="Resources\Background\imageStart.jpg" />
     <Resource Include="Resources\NGK.png" />
+    <Resource Include="Resources\ПО\P01.png" />
+    <Resource Include="Resources\ПО\P02.png" />
+    <Resource Include="Resources\ПО\P03.png" />
+    <Resource Include="Resources\ПО\P04.png" />
+    <Resource Include="Resources\ПО\P05.png" />
+    <Resource Include="Resources\ПО\P06.png" />
+    <Resource Include="Resources\ПО\P07.png" />
+    <Resource Include="Resources\ПО\P08.png" />
+    <Resource Include="Resources\ПО\P11.png" />
     <Resource Include="Resources\Шкаф\таблица клемм.png" />
     <Resource Include="Resources\Шкаф\Шкаф 1.jpg" />
   </ItemGroup>
@@ -377,22 +387,22 @@
     <Resource Include="Resources\КИП5\K2.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\ПО\P01.png" />
-    <Resource Include="Resources\ПО\P02.png" />
-    <Resource Include="Resources\ПО\P03.png" />
-    <Resource Include="Resources\ПО\P04.png" />
-    <Resource Include="Resources\ПО\P05.png" />
-    <Resource Include="Resources\ПО\P06.png" />
-    <Resource Include="Resources\ПО\P07.png" />
-    <Resource Include="Resources\ПО\P08.png" />
-    <Resource Include="Resources\ПО\P09.png" />
-    <Resource Include="Resources\ПО\P10.png" />
-    <Resource Include="Resources\ПО\P11.png" />
     <Resource Include="Resources\ПО\Web01.png" />
     <Resource Include="Resources\ПО\Web02.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ПО\Notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Автомат1 DIN\avtomat0.jpg" />
+    <Resource Include="Resources\Автомат1 DIN\avtomat1.jpg" />
+    <Resource Include="Resources\Автомат1 DIN\avtomat2.jpg" />
+    <Resource Include="Resources\Автомат1 DIN\avtomat3.jpg" />
+    <Resource Include="Resources\Автомат1 DIN\avtomat4.jpg" />
+    <Resource Include="Resources\Автомат1 DIN\avtomat5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DIN.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

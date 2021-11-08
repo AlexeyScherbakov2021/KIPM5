@@ -5,5 +5,6 @@
              StartupUri="MainWindow.xaml" ShutdownMode="OnMainWindowClose">
     <Application.Resources>
         <ResourceDictionary Source="Styles/StylesElements.xaml"/>
+
     </Application.Resources>
 </Application>

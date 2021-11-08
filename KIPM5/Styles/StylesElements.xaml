@@ -164,6 +164,21 @@
         </Setter>
     </Style>
 
+    <Style x:Key="PathFlash" TargetType="{x:Type Path}">
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Path.Loaded">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.8" To="0" Duration="0:0:0.2" 
+                                                 AutoReverse="True" RepeatBehavior="Forever">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
 
 
 </ResourceDictionary>
