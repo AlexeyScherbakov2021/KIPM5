@@ -172,6 +172,7 @@ namespace KIPM5
 
                     pathCOMPort.Visibility = Visibility.Hidden;
                     pathConnect.Visibility = Visibility.Visible;
+                    cbCOM.Visibility = Visibility.Hidden;
 
                     break;
 
