@@ -80,7 +80,7 @@
             <Run Text="Пример настройки конфигурации КИП-М5. Для выполнения действий кликайте на выделенных элементах."/>
         </TextBlock>
         <Grid x:Name="grid1" Margin="10,52.28,20,-40" Grid.Row="0" ClipToBounds="True">
-            <Canvas x:Name="canvas" ClipToBounds="True" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="599" Width="1290" Opacity="0.25">
+            <Canvas x:Name="canvas" ClipToBounds="True" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="599" Width="1290" Opacity="1">
                 <Image Source="Resources/DIN.png" Canvas.Top="240" Canvas.Left="-293" Height="107.92" Width="797.141"/>
                 <Image x:Name="imgAvtomat" Source="Resources/Автомат1 DIN/avtomat0.jpg" Canvas.Left="24" Canvas.Top="167.5" Height="236.833" Width="113.5">
                     <Image.Effect>

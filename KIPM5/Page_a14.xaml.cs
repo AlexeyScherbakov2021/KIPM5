@@ -26,6 +26,10 @@ namespace KIPM5
             new ItemPlayer() { Name = "«ВУ» Светится во время передачи данных в систему верхнего уровня" },
         };
 
+        BlinkElement blinkPwr;
+        BlinkElement blinkPoll;
+        BlinkElement blinkGPRS;
+        BlinkElement blinkExtCtrl;
 
         public Page_a14()
         {
@@ -35,6 +39,16 @@ namespace KIPM5
 
             MainFrame.Main.Header1.Text = "Раздел 1.";
             MainFrame.Main.Header2.Text = "Светодиодная индикация";
+
+            blinkPwr = new BlinkElement(path0);
+            blinkPoll = new BlinkElement(path1);
+            blinkGPRS = new BlinkElement(path2);
+            blinkExtCtrl = new BlinkElement(path3);
+
+            blinkPwr.SetStatus(true, 5, 100);
+            blinkPoll.SetStatus(false, 5, 100);
+            blinkGPRS.SetStatus(false, 5, 100);
+            blinkExtCtrl.SetStatus(false, 5, 100);
 
             lbItems.ItemsSource = listItemPlayer;
             lbItems.DisplayMemberPath = "Name";

@@ -18,7 +18,7 @@
                 <DropShadowEffect Color="LightGray" BlurRadius="63" ShadowDepth="0"/>
             </Image.Effect>
         </Image>
-        <TextBlock Margin="26.5,28.827,3.5,18" TextWrapping="Wrap" FontSize="16"><Run Text="В конфигурации по умолчанию веб-интерфейс включен на 80 порту."/><Run Text=" Для просмотра текущего состояния и параметров КИП-М5 используется любой браузер."/><LineBreak/><Run/><LineBreak/><Run Text="Адрес устройства в сети "/><Run Text="Ethernet "/><Run Text=" - "/><Run FontWeight="Bold" Text="192.168.1.1"/></TextBlock>
+        <TextBlock Margin="26.5,28.827,3.5,18" TextWrapping="Wrap" FontSize="16"><Run Text="В конфигурации по умолчанию веб-интерфейс включен на 80 порту."/><Run Text=" Для просмотра текущего состояния и параметров КИП-М5 используется любой браузер."/><LineBreak/><Run/><LineBreak/><Run Text="Адрес устройства в сети "/><Run Text="Ethernet "/><Run Text=" - "/><Run FontWeight="Bold" Text="192.168.1.1"/><LineBreak/><Run FontWeight="Bold"/><LineBreak/><Run FontWeight="Bold"/></TextBlock>
 
     </Grid>
 </Page>
