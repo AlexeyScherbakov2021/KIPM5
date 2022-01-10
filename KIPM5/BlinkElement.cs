@@ -14,7 +14,8 @@ namespace KIPM5
     {
         private UIElement _element;
         private bool _end_status;
-
+        private int[] _program;
+        private int curProg;
 
         private bool _status = false;
         public bool status
@@ -33,10 +34,10 @@ namespace KIPM5
             }
         }
 
-        private int _count;
+        //private int _count;
         private DispatcherTimer timer;
 
-        private int _frequence;
+        //private int _frequence;
 
         public BlinkElement(UIElement element)
         {
@@ -50,14 +51,18 @@ namespace KIPM5
         //--------------------------------------------------------------------------------
         private void Timer_Tick(object sender, EventArgs e)
         {
-            status = !status;
-
-            if (--_count <= 0)
+            if (curProg >= _program.Length)
             {
                 Stop();
-                //timer.Stop();
-                //status = _end_status;
+                return;
             }
+
+            timer.Stop();
+            status = !status;
+            timer.Interval = new TimeSpan(0,0,0,0, _program[curProg]);
+            curProg++;
+            timer.Start();
+
 
         }
 
@@ -65,21 +70,27 @@ namespace KIPM5
         //--------------------------------------------------------------------------------
         // установка статуса элемента
         //--------------------------------------------------------------------------------
-        public void SetStatus(bool stat, int count = 0, int freq = 500)
+        public void SetStatus(bool end_stat, bool start_stat, int[] prog)
         {
-            _end_status = stat;
-            _frequence = freq;
-            _count = count * 2;
+            _end_status = end_stat;
+            _program = prog;
+            curProg = 1;
+            status = start_stat;
+            //_frequence = freq;
+            //_count = count * 2;
 
-            if (count > 0)
+            if (_program.Length > 1)
             {
-                timer.Interval = new TimeSpan(0,0,0,0, freq);
+                timer.Interval = new TimeSpan(0,0,0,0, _program[0]);
                 timer.Start();
             }
             else
                 status = _end_status;
         }
 
+        //--------------------------------------------------------------------------------
+        // остановка программы мигания
+        //--------------------------------------------------------------------------------
         public void Stop()
         {
             timer.Stop();

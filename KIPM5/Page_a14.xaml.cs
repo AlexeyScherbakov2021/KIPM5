@@ -45,10 +45,14 @@ namespace KIPM5
             blinkGPRS = new BlinkElement(path2);
             blinkExtCtrl = new BlinkElement(path3);
 
-            blinkPwr.SetStatus(true, 5, 100);
-            blinkPoll.SetStatus(false, 5, 100);
-            blinkGPRS.SetStatus(false, 5, 100);
-            blinkExtCtrl.SetStatus(false, 5, 100);
+            blinkPwr.SetStatus(true, false, new int[]      { 600, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150 });
+            blinkPoll.SetStatus(false, false, new int[]    { 600, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150,
+                50, 800,  50, 50,  50, 800,  50, 50, 50, 50});
+            blinkGPRS.SetStatus(true, false, new int[]    { 600, 150, 150, 150, 150, 150, 150, 150, 150, 150, 3500,
+                });
+            blinkExtCtrl.SetStatus(false, false, new int[] { 600, 150, 150, 150, 150, 150, 150, 150, 150, 150, 1500,
+                50,50, 50,50, 50,1000,  500 });
+
 
             lbItems.ItemsSource = listItemPlayer;
             lbItems.DisplayMemberPath = "Name";

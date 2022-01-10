@@ -24,7 +24,7 @@ namespace KIPM5
             MainFrame.Main.SetSet(MainFrame.EnSet.ALL);
 
             MainFrame.Main.Header1.Text = "Раздел 1.";
-            MainFrame.Main.Header2.Text = "Порядок установки";
+            MainFrame.Main.Header2.Text = "Порядок подключения";
 
         }
     }
